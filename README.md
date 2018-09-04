@@ -1,18 +1,18 @@
-# ESLint plugin "interfaced"
+# eslint-plugin-interfaced
 
 ***
 
-Collection of rules for approaches adopted by "Interfaced" company
+[ESLint](https://eslint.org) plugin with rules for approaches adopted by [Interfaced](http://interfaced.tv) company.
 
 ## Usage
 
-1) Install the package
+1) Install the package:
 
 ```
 npm i eslint-plugin-interfaced --save-dev
 ```
 
-2) Specify "interfaced" as plugin in your .eslintrc
+2) Specify "interfaced" as a plugin in your .eslintrc:
 
 ```
 {
@@ -22,7 +22,7 @@ npm i eslint-plugin-interfaced --save-dev
 }
 ```
 
-3) Enable all of the rules that you would like to use in your .eslintrc
+3) Enable all of the rules that you would like to use in your .eslintrc:
 
 ```
 {
@@ -34,57 +34,146 @@ npm i eslint-plugin-interfaced --save-dev
 
 ## Rules
 
-### typecast-spacing (fixable)
+### abstract-class-name-prefix
 
-Enforce space between jsdoc and parenthesis (typecast)
-
-### caps-const
-
-Enforce caps notation for constant names and enum properties
+Enforce "Abstract" prefix for abstract class name.
 
 ### capitalized-enum
 
-Enforce capitalization of the first letter of an enum
+Enforce capitalization of the first letter of an enum.
 
 ### capitalized-typedef
 
-Enforce capitalization of the first letter of a typedef
+Enforce capitalization of the first letter of a typedef.
 
-### abstract-class-name-prefix
+### caps-const
 
-Enforce "Abstract" prefix for abstract class names
-
-### interface-name-prefix
-
-Enforce "I" prefix for interface names
+Enforce caps notation for constant name and enum properties.
 
 ### event-const-desc
 
-Enforce event description ("Fired with: ...") for event constant
+Enforce event description ("Fired with: ...") for event constant.
 
-### prevent-unused-typedef-vars
+### event-const-value
 
-Prevent typedef variables to be marked as unused
+Enforce event constant value to be a lowercase latinic string with dash sign delimiter.
 
-### prevent-unused-meta-params
+### interface-name-prefix
 
-Prevent interface, record, abstract or override method params to be marked as unused
+Enforce "I" prefix for interface name.
+
+### jsdoc-tags-order
+
+Enforce specified order for JSDoc tags.
+
+**Options**:
+
+```
+{
+	tagsOrder: string[] // abstract, param, return etc.
+}
+```
+
+### jsdoc-type-application-dot
+
+Enforce dot before "<" symbol in JSDoc type application.
+
+**Options**:
+
+```
+string // always, never, consistent
+```
+
+### jsdoc-type-spacing
+
+Enforce consistent spacing in JSDoc type.
+
+**Options**:
+
+```
+{
+	typeApplications: string, // always, never
+	functionParams: string, // always, never
+	functionResult: string, // always, never
+	recordFields: string, // always, never
+	unionElements: string // always, never
+}
+```
+
+### lines-around-class (fixable)
+
+Enforce newlines before and after class.
+
+**Options**:
+
+```
+{
+	before: number,
+	after: number,
+	collisionPriority: string // before, after
+}
+```
+
+### lines-between-methods (fixable)
+
+Enforce newlines between methods.
+
+**Options**:
+
+```
+{
+	amount: number
+}
+```
+
+### lines-between-props (fixable)
+
+Enforce newlines between properties.
+
+**Options**:
+
+```
+{
+	amount: number
+}
+```
+
+### lines-between-statics (fixable)
+
+Enforce newline between static expressions (const, enum, typedef).
+
+**Options**:
+
+```
+{
+	amount: number
+}
+```
+
+### methods-order
+
+Enforce specified order for methods.
+
+**Options**:
+
+```
+{
+	scopesOrder: string[], // public, protected, private
+	staticInTheEnd: boolean
+}
+```
 
 ### no-empty-method
 
-Disallow empty methods except abstract, interface and record methods
+Disallow empty methods when class is neither abstract, interface nor record.
 
 ### no-public-underscore
 
-Disallow methods and properties with name that starts from "_" without private/protected access modifier
-
-### no-tabs-in-jsdoc-type
-
-Disallow tab characters in JSDoc type
+Disallow methods and properties with name that starts from "_" without private/protected access modifier.
 
 ### no-restricted-jsdoc-tags
 
-Disallow specified JSDoc tags
+Disallow specified JSDoc tags.
 
 **Options**:
 
@@ -102,47 +191,13 @@ Disallow specified JSDoc tags
 }
 ```
 
-### jsdoc-tags-order
+### no-tabs-in-jsdoc-type
 
-Enforce specified JSDoc tags order
-
-**Options**:
-
-```
-{
-	tagsOrder: string[] // abstract, param, return etc.
-}
-```
-
-### jsdoc-type-application-dot
-
-Enforce dot before "<" symbol in JSDoc type application
-
-**Options**:
-
-```
-string // always, never, consistent
-```
-
-### jsdoc-type-spacing
-
-Enforce consistent spacing in JSDoc type
-
-**Options**:
-
-```
-{
-	typeApplications: string, // always, never
-	functionParams: string, // always, never
-	functionResult: string, // always, never
-	recordFields: string, // always, never
-	unionElements: string // always, never
-}
-```
+Disallow tab characters in JSDoc type.
 
 ### prefer-shorthand-jsdoc-types
 
-Require usage of shorthand notation for some JSDoc types when possible
+Enforce usage of a shorthand notation for some JSDoc types when possible.
 
 **Options**:
 
@@ -153,22 +208,17 @@ Require usage of shorthand notation for some JSDoc types when possible
 }
 ```
 
-### methods-order
+### prevent-unused-meta-params
 
-Enforce specified methods order
+Prevent interface, record, abstract or overriding method params to be marked as unused.
 
-**Options**:
+### prevent-unused-typedef-vars
 
-```
-{
-	scopesOrder: string[], // public, protected, private
-	staticInTheEnd: boolean
-}
-```
+Prevent typedef variable to be marked as unused.
 
 ### props-order
 
-Enforce specified properties order
+Enforce specified order for properties.
 
 **Options**:
 
@@ -181,7 +231,7 @@ Enforce specified properties order
 
 ### statics-order
 
-Enforce specified static expressions (const, enum, typedef) order
+Enforce specified order for static expressions (const, enum, typedef).
 
 **Options**:
 
@@ -191,73 +241,27 @@ Enforce specified static expressions (const, enum, typedef) order
 }
 ```
 
-### lines-around-class (fixable)
+### typecast-spacing (fixable)
 
-Enforce newlines before and after class
-
-**Options**:
-
-```
-{
-	before: number,
-	after: number,
-	collisionPriority: string // before, after
-}
-```
-
-### lines-between-methods (fixable)
-
-Enforce newlines between methods
-
-**Options**:
-
-```
-{
-	amount: number
-}
-```
-
-### lines-between-props (fixable)
-
-Enforce newlines between properties
-
-**Options**:
-
-```
-{
-	amount: number
-}
-```
-
-### lines-between-statics (fixable)
-
-Enforce newline between static expressions (const, enum, typedef)
-
-**Options**:
-
-```
-{
-	amount: number
-}
-```
+Enforce spacing for typecast (JSDoc + parenthesis).
 
 ## Redefined rules
 
-Some useful rules that provides ESLint are slightly inappropriate for Closure Compiler environment, 
-so we redefine them with some adjusting for our requirements
-
-### [no-unused-expressions](https://eslint.org/docs/rules/no-unused-expressions)
-
-Ignore report for typedefs and property definitions
-
-### [valid-jsdoc](https://eslint.org/docs/rules/valid-jsdoc)
-
-Ignore report about "function has no return statement" for interface and record methods
+Some useful rules which are provided by ESLint are slightly inappropriate for Closure Compiler environment, 
+so we redefine them with some adjusting for our requirements.
 
 ### [camelcase](https://eslint.org/docs/rules/camelcase)
 
-Ignore report for arguments which name has "opt_" (optional argument) or "var_" (variable arguments) prefix
+Ignore report for arguments that have name starting with "opt_" (optional argument) or "var_" (variable arguments).
+
+### [no-unused-expressions](https://eslint.org/docs/rules/no-unused-expressions)
+
+Ignore report for typedef and property definition.
 
 ### [require-jsdoc](https://eslint.org/docs/rules/require-jsdoc)
 
-Consider class expressions alongside with class declarations
+Consider class expressions alongside with class declarations.
+
+### [valid-jsdoc](https://eslint.org/docs/rules/valid-jsdoc)
+
+Ignore report about "function has no return statement" for interface and record methods.

@@ -1,5 +1,12 @@
 # Change log
 
+## 0.6.0 (release date: 20.06.2018)
+
+* `prefer-shorthand-jsdoc-types`: handle params without type
+* `caps-const`: skip computed properties of an enum
+
+* New rule: `event-const-value`
+
 ## 0.5.0 (release date: 15.01.2018)
 
 * New rules:
@@ -9,18 +16,21 @@
 
 ## 0.4.1 (release date: 11.12.2017)
 
-`camelcase`: handling of destructuring
+* `camelcase`: handling of destructuring
 
 ## 0.4.0 (release date: 11.12.2017)
 
-* Redefined `camelcase` to ignore report for arguments which name has `opt_`/`var_` prefix
-* Redefined `require-jsdoc` to consider class expressions alongside with class declarations
 * `no-unused-expressions`: consider property definitions from the prototype
 * `caps-const`, `capitalized-enum`, `capitalized-typedef`: removed fixing to avoid destructive code changes
+
 * New rules:
     - `interface-name-prefix`
     - `abstract-class-name-prefix`
     - `no-tabs-in-jsdoc-type`
+
+* New redefinitions:
+	- `camelcase` to ignore report for arguments which name has `opt_`/`var_` prefix
+	- `require-jsdoc` to consider class expressions alongside with class declarations
 
 ## 0.3.1 (release date: 23.11.2017)
 
@@ -29,17 +39,20 @@
 
 ## 0.3.0 (release date: 20.11.2017)
 
-* Required `npm@5`
-* Redefined `valid-jsdoc` to ignore report about "function has no return statement" for interface and record methods
-* Redefined `no-unused-expressions` to ignore typedefs
+* `npm@5`
 * `no-empty-method`: treat record (class marked by `@record`) as entity with allowed empty methods
 * `space-in-typecast`: renamed to `typecast-spacing` to be consistent with ESLint conventions
 * `jsdoc-tags-order`, `no-restricted-jsdoc-tags`: report error for jsdoc instead of its owner
+
 * New rules:
     - `jsdoc-type-spacing`
     - `jsdoc-type-application-dot`
     - `capitalized-enum`
     - `capitalized-typedef`
+
+* New redefinitions:
+	- `valid-jsdoc` to ignore report about "function has no return statement" for interface and record methods
+	- `no-unused-expressions` to ignore typedefs
     
 ## 0.2.1 (release date: 9.11.2017)
 
@@ -48,13 +61,14 @@
 
 ## 0.2.0 (release date: 31.10.2017)
 
-* Migrate to ESLint 4
+* `eslint@4`
 * `newline-before-after-class`: param `newlinesCountBefore` renamed to `before` 
 * `newline-before-after-class`: param `newlinesCountAfter` renamed to `after` 
 * `newline-between-methods`: param `newlinesCount` renamed to `amount` 
 * `newline-between-props`: param `newlinesCount` renamed to `amount` 
 * `newline-between-statics`: param `newlinesCount` renamed to `amount` 
-* Renamed rules with `newline` prefix to be consistent with ESLint conventions:
+
+* Renamed rules to be consistent with ESLint conventions:
     - `newline-before-after-class` -> `lines-around-class`
     - `newline-between-methods` -> `lines-between-methods`
     - `newline-between-props` -> `lines-between-props`
@@ -63,7 +77,7 @@
 ## 0.1.2 (release date: 5.07.2017)
 
 * `space-in-typecast`: more robust implementation
-* Added handling of doctrine's parse exceptions
+* `*`: handling of doctrine's parse exceptions
 
 ## 0.1.1 (release date: 29.06.2017)
 

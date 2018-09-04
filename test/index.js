@@ -10,32 +10,39 @@ const ruleTester = new RuleTester({
 });
 
 const ruleNames = [
-	'typecast-spacing',
-	'caps-const',
+	'camelcase',
+	'no-unused-expressions',
+	'require-jsdoc',
+	'valid-jsdoc',
+
+	'abstract-class-name-prefix',
 	'capitalized-enum',
 	'capitalized-typedef',
+	'caps-const',
 	'event-const-desc',
+	'event-const-value',
 	'interface-name-prefix',
-	'abstract-class-name-prefix',
-	'camelcase',
-	'no-restricted-jsdoc-tags',
-	'no-public-underscore',
-	'no-empty-method',
-	'no-unused-expressions',
-	'no-tabs-in-jsdoc-type',
+	'jsdoc-tags-order',
+	'jsdoc-type-application-dot',
+	'jsdoc-type-spacing',
 	'lines-around-class',
 	'lines-between-methods',
 	'lines-between-props',
 	'lines-between-statics',
-	'statics-order',
-	'props-order',
 	'methods-order',
-	'jsdoc-tags-order',
-	'jsdoc-type-application-dot',
-	'jsdoc-type-spacing',
-	'valid-jsdoc',
-	'require-jsdoc',
-	'prefer-shorthand-jsdoc-types'
+	'no-empty-method',
+	'no-public-underscore',
+	'no-restricted-jsdoc-tags',
+	'no-tabs-in-jsdoc-type',
+	'prefer-shorthand-jsdoc-types',
+	'props-order',
+	'statics-order',
+	'typecast-spacing'
+];
+
+const preventUnusedRuleName = [
+	'prevent-unused-typedef-vars',
+	'prevent-unused-meta-params'
 ];
 
 ruleNames.forEach((ruleName) => {
@@ -43,12 +50,7 @@ ruleNames.forEach((ruleName) => {
 	ruleTester.run(ruleName, rules[ruleName], require(path.join(__dirname, 'rules', ruleName)));
 });
 
-const preventUnusedRules = [
-	'prevent-unused-typedef-vars',
-	'prevent-unused-meta-params'
-];
-
-preventUnusedRules.forEach((ruleName) => {
+preventUnusedRuleName.forEach((ruleName) => {
 	ruleTester.linter.defineRule(ruleName, rules[ruleName]);
 
 	ruleTester.run(

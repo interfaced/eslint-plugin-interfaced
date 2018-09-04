@@ -27,6 +27,18 @@ module.exports = {
 		)
 	}, {
 		options: [{
+			optionalParam: 'always'
+		}],
+		code: concat(
+			`/**`,
+			` * @param a`,
+			` * @param b`,
+			` * @param {number=} c`,
+			` */`,
+			`function _(a, b, c) {}`
+		)
+	}, {
+		options: [{
 			optionalParam: 'never'
 		}],
 		code: concat(

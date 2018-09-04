@@ -41,6 +41,18 @@ module.exports = extendToClassExpression({
 			`class Klass {}`,
 			``,
 			`/**`,
+			` * @enum {number}`,
+			` */`,
+			`Klass.Enum = {`,
+			`   [value]: 1,`,
+			`   [obj.prop]: 2`,
+			`};`
+		)
+	}, {
+		code: concat(
+			`class Klass {}`,
+			``,
+			`/**`,
 			` * @const {number}`,
 			` */`,
 			`Klass.CONST = 1;`,

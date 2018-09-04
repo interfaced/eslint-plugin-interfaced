@@ -1,9 +1,13 @@
 {
   "name": "eslint-plugin-interfaced",
-  "version": "0.5.0",
-  "description": "ESLint plugin with rules for approaches adopted by 'Interfaced' company",
-  "author": "Kirill Dronkin (http://dronkin.ru)",
+  "version": "0.6.0",
+  "description": "ESLint plugin with rules for approaches adopted by Interfaced company",
   "license": "MIT",
+  "author": "Interfaced (http://interfaced.tv)",
+  "contributors": [
+    "Kirill Dronkin <kirilldronkin@gmail.com>",
+    "Goryaynov Igor <ygreknomean@gmail.com>"
+  ],
   "engines": {
     "node": ">=6",
     "npm": ">=5"
@@ -22,20 +26,17 @@
   "keywords": [
     "lint",
     "eslint",
-    "eslint-plugin",
-    "eslintplugin",
+    "plugin",
     "interfaced",
-    "lines-between",
+    "lines",
     "whitespace",
     "order",
     "jsdoc",
-    "jsodoc-tags",
     "const",
+    "event",
     "enum",
     "typedef",
-    "empty-method",
-    "typecast",
-    "type-application-dot"
+    "typecast"
   ],
   "peerDependencies": {
     "eslint": "^4.0.0"

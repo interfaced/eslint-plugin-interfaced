@@ -7,7 +7,7 @@ module.exports = extendToClassExpression({
 			staticInTheEnd: true
 		}],
 		code: concat(
-			`class Klass {`,
+			`class Klass1 {`,
 			`   constructor() {}`,
 			``,
 			`   /**`,
@@ -63,6 +63,10 @@ module.exports = extendToClassExpression({
 			`    * @private`,
 			`    */`,
 			`   static _staticPrivateMethod() {}`,
+			`}`,
+			``,
+			`class Klass2 {`,
+			`   constructor() {}`,
 			`}`
 		)
 	}, {

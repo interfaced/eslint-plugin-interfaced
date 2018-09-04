@@ -31,8 +31,8 @@ module.exports = extendToClassExpression({
 			` */`,
 			`Klass.Enum = {`,
 			`   VALUE: 1,`,
-			`   VALUE_TWO: 2,`,
-			`   VALUE_THREE: 3,`,
+			`   'VALUE_TWO': 2,`,
+			`   'VALUE_THREE': 3,`,
 			`   VALUE4: 4`,
 			`};`
 		)
@@ -89,7 +89,7 @@ module.exports = extendToClassExpression({
 			` */`,
 			`Klass.Enum = {`,
 			`   VALUE_one: 1,`,
-			`   value_TWO: 2`,
+			`   'value_TWO': 2`,
 			`};`
 		),
 		output: concat(
@@ -100,7 +100,7 @@ module.exports = extendToClassExpression({
 			` */`,
 			`Klass.Enum = {`,
 			`   VALUE_ONE: 1,`,
-			`   VALUE_TWO: 2`,
+			`   'VALUE_TWO': 2`,
 			`};`
 		),
 		errors: errors(

@@ -158,8 +158,11 @@ Options:
 
 ## Rules to implement (in order of priority)
 
-* Check that class name for abstract class starts with "Abstract"
-* Check that class name for interface class starts with "I"
+* Enforce `super` call when method is marked by `@override`
+* Check that class name for abstract class starts with `Abstract`
+* Check that class name for interface class starts with `I`
+* Disallow `.` in generics (e.g.: `Klass.<number>` is invalid)
+* Disallow `@override` JSDoc tag for classes without extending/implementing
 * Enforce newline before/after `super` call
 * Disallow tabs in typedef
 * Enforce structure of multiline typedef

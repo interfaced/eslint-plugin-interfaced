@@ -9,15 +9,25 @@ module.exports = {
 				.forEach((testCase) => {
 					const extendedTestCase = {};
 
-					if (testCase.code && testCase.code.indexOf('class Klass') !== -1) {
-						extendedTestCase.code = testCase.code.replace(/class Klass(\d|)/g, 'Klass$1 = class');
+					const classDeclarationRegExp = /^class (?:.*) {/;
+					const classDeclarationReplaceRegExp = /class ([^ ]*)/;
+					const classDeclarationReplaceString = '$1 = class';
+
+					if (testCase.code && classDeclarationRegExp.test(testCase.code)) {
+						extendedTestCase.code = testCase.code.replace(
+							classDeclarationReplaceRegExp,
+							classDeclarationReplaceString
+						);
 					}
 
-					if (testCase.output && testCase.output.indexOf('class Klass') !== -1) {
-						extendedTestCase.output = testCase.output.replace(/class Klass(\d|)/g, 'Klass$1 = class');
+					if (testCase.output && classDeclarationRegExp.test(testCase.output)) {
+						extendedTestCase.output = testCase.output.replace(
+							classDeclarationReplaceRegExp,
+							classDeclarationReplaceString
+						);
 					}
 
-					if (Object.keys(testCase).length) {
+					if (Object.keys(extendedTestCase).length) {
 						testCases.push(Object.assign({}, testCase, extendedTestCase));
 					}
 				});

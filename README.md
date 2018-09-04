@@ -16,7 +16,7 @@ npm i eslint-plugin-interfaced --save-dev
 
 ```
 {
-  "plugins": [
+  plugins: [
     "interfaced"
   ]
 }
@@ -26,7 +26,7 @@ npm i eslint-plugin-interfaced --save-dev
 
 ```
 {
-  "rules": [
+  rules: [
     "interfaced/methods-order": ...
   ]
 }
@@ -36,43 +36,47 @@ npm i eslint-plugin-interfaced --save-dev
 
 ### typecast-spacing (fixable)
 
-Enforce space between jsdoc and parenthesis (typecast).
+Enforce space between jsdoc and parenthesis (typecast)
 
-### caps-const (fixable)
+### caps-const
 
-Enforce caps notation for constant names and enum properties.
+Enforce caps notation for constant names and enum properties
 
-### capitalized-enum (fixable)
+### capitalized-enum
 
-Enforce capitalization of the first letter of an enum.
+Enforce capitalization of the first letter of an enum
 
-### capitalized-typedef (fixable)
+### capitalized-typedef
 
-Enforce capitalization of the first letter of a typedef.
+Enforce capitalization of the first letter of a typedef
+
+### abstract-class-name-prefix
+
+Enforce "Abstract" prefix for abstract class names
+
+### interface-name-prefix
+
+Enforce "I" prefix for interface names
 
 ### event-const-desc
 
-Enforce event description ("Fired with: ...") for event constant.
-
-### valid-jsdoc
-
-It uses [original](https://eslint.org/docs/rules/valid-jsdoc) rule, but ignores report about "function has no return statement" for interface and record methods.
+Enforce event description ("Fired with: ...") for event constant
 
 ### no-empty-method
 
-Disallow empty methods except abstract, interface and record methods.
+Disallow empty methods except abstract, interface and record methods
 
 ### no-public-underscore
 
-Disallow methods and properties with name that starts from "_" without private/protected access modifier.
+Disallow methods and properties with name that starts from "_" without private/protected access modifier
 
-### no-unused-expressions
+### no-tabs-in-jsdoc-type
 
-It uses [original](https://eslint.org/docs/rules/no-unused-expressions) rule, but ignores report for typedefs and property definitions.
+Disallow tab characters in JSDoc type
 
 ### no-restricted-jsdoc-tags
 
-Disallow specified JSDoc tags.
+Disallow specified JSDoc tags
 
 **Options**:
 
@@ -92,7 +96,7 @@ Disallow specified JSDoc tags.
 
 ### jsdoc-tags-order
 
-Enforce specified JSDoc tags order.
+Enforce specified JSDoc tags order
 
 **Options**:
 
@@ -104,7 +108,7 @@ Enforce specified JSDoc tags order.
 
 ### jsdoc-type-application-dot
 
-Enforce dot before "<" symbol in JSDoc type application.
+Enforce dot before "<" symbol in JSDoc type application
 
 **Options**:
 
@@ -114,7 +118,7 @@ string // always, never, consistent
 
 ### jsdoc-type-spacing
 
-Enforce consistent spacing in JSDoc type.
+Enforce consistent spacing in JSDoc type
 
 **Options**:
 
@@ -130,7 +134,7 @@ Enforce consistent spacing in JSDoc type.
 
 ### methods-order
 
-Enforce specified methods order.
+Enforce specified methods order
 
 **Options**:
 
@@ -143,7 +147,7 @@ Enforce specified methods order.
 
 ### props-order
 
-Enforce specified properties order.
+Enforce specified properties order
 
 **Options**:
 
@@ -156,7 +160,7 @@ Enforce specified properties order.
 
 ### statics-order
 
-Enforce specified static expressions (const, enum, typedef) order.
+Enforce specified static expressions (const, enum, typedef) order
 
 **Options**:
 
@@ -168,7 +172,7 @@ Enforce specified static expressions (const, enum, typedef) order.
 
 ### lines-around-class (fixable)
 
-Enforce newlines before and after class.
+Enforce newlines before and after class
 
 **Options**:
 
@@ -182,7 +186,7 @@ Enforce newlines before and after class.
 
 ### lines-between-methods (fixable)
 
-Enforce newlines between methods.
+Enforce newlines between methods
 
 **Options**:
 
@@ -194,7 +198,7 @@ Enforce newlines between methods.
 
 ### lines-between-props (fixable)
 
-Enforce newlines between properties.
+Enforce newlines between properties
 
 **Options**:
 
@@ -206,7 +210,7 @@ Enforce newlines between properties.
 
 ### lines-between-statics (fixable)
 
-Enforce newline between static expressions (const, enum, typedef).
+Enforce newline between static expressions (const, enum, typedef)
 
 **Options**:
 
@@ -216,14 +220,23 @@ Enforce newline between static expressions (const, enum, typedef).
 }
 ```
 
-## Rules to implement (in order of priority)
+## Redefined rules
 
-* Enforce `super` call when method is marked by `@override`
-* Check that class name for abstract class starts with `Abstract`
-* Check that class name for interface class starts with `I`
-* Disallow `@override` JSDoc tag for classes without extending/implementing
-* Enforce newline before/after `super` call
-* Disallow tabs in typedef
-* Enforce structure of multiline typedef
-* Enforce empty method open/close curly brackets to be on the same line
-* Expressions blacklist for old platforms
+Some useful rules that provides ESLint are slightly inappropriate for Closure Compiler environment, 
+so we redefine them with some adjusting for our requirements
+
+### [no-unused-expressions](https://eslint.org/docs/rules/no-unused-expressions)
+
+Ignore report for typedefs and property definitions
+
+### [valid-jsdoc](https://eslint.org/docs/rules/valid-jsdoc)
+
+Ignore report about "function has no return statement" for interface and record methods
+
+### [camelcase](https://eslint.org/docs/rules/camelcase)
+
+Ignore report for arguments which name has "opt_" (optional argument) or "var_" (variable arguments) prefix
+
+### [require-jsdoc](https://eslint.org/docs/rules/require-jsdoc)
+
+Consider class expressions alongside with class declarations

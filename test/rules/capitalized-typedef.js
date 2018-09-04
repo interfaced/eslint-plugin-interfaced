@@ -20,14 +20,6 @@ module.exports = extendToClassExpression({
 			` */`,
 			`Klass.typedef;`
 		),
-		output: concat(
-			`class Klass {}`,
-			``,
-			`/**`,
-			` * @typedef {number}`,
-			` */`,
-			`Klass.Typedef;`
-		),
 		errors: errors(
 			`Typedef "typedef" is not capitalized.`
 		)

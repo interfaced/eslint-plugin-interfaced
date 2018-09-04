@@ -67,16 +67,6 @@ module.exports = extendToClassExpression({
 			`   }`,
 			`}`
 		),
-		output: concat(
-			`class Klass {`,
-			`   constructor() {`,
-			`       /**`,
-			`        * @const {number}`,
-			`        */`,
-			`       this.CONST_ONE = 1;`,
-			`   }`,
-			`}`
-		),
 		errors: errors(
 			`Constant "const_one" is not in caps notation.`
 		)
@@ -92,17 +82,6 @@ module.exports = extendToClassExpression({
 			`   'value_TWO': 2`,
 			`};`
 		),
-		output: concat(
-			`class Klass {}`,
-			``,
-			`/**`,
-			` * @enum {number}`,
-			` */`,
-			`Klass.Enum = {`,
-			`   VALUE_ONE: 1,`,
-			`   'VALUE_TWO': 2`,
-			`};`
-		),
 		errors: errors(
 			`Enum property "VALUE_one" is not in caps notation.`,
 			`Enum property "value_TWO" is not in caps notation.`
@@ -115,14 +94,6 @@ module.exports = extendToClassExpression({
 			` * @const {number}`,
 			` */`,
 			`Klass.const = 1;`
-		),
-		output: concat(
-			`class Klass {}`,
-			``,
-			`/**`,
-			` * @const {number}`,
-			` */`,
-			`Klass.CONST = 1;`
 		),
 		errors: errors(
 			`Constant "const" is not in caps notation.`

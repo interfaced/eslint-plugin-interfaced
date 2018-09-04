@@ -4,10 +4,14 @@ module.exports.rules = {
 	'capitalized-enum': require('./lib/rules/capitalized-enum'),
 	'capitalized-typedef': require('./lib/rules/capitalized-typedef'),
 	'event-const-desc': require('./lib/rules/event-const-desc'),
+	'interface-name-prefix': require('./lib/rules/interface-name-prefix'),
+	'camelcase': require('./lib/rules/redefined/camelcase'),
+	'abstract-class-name-prefix': require('./lib/rules/abstract-class-name-prefix'),
 	'no-empty-method': require('./lib/rules/no-empty-method'),
 	'no-public-underscore': require('./lib/rules/no-public-underscore'),
 	'no-restricted-jsdoc-tags': require('./lib/rules/no-restricted-jsdoc-tags'),
 	'no-unused-expressions': require('./lib/rules/redefined/no-unused-expressions'),
+	'no-tabs-in-jsdoc-type': require('./lib/rules/no-tabs-in-jsdoc-type'),
 	'lines-between-methods': require('./lib/rules/lines-between-methods'),
 	'lines-between-props': require('./lib/rules/lines-between-props'),
 	'lines-between-statics': require('./lib/rules/lines-between-statics'),
@@ -18,5 +22,6 @@ module.exports.rules = {
 	'jsdoc-tags-order': require('./lib/rules/jsdoc-tags-order'),
 	'jsdoc-type-application-dot': require('./lib/rules/jsdoc-type-application-dot'),
 	'jsdoc-type-spacing': require('./lib/rules/jsdoc-type-spacing'),
-	'valid-jsdoc': require('./lib/rules/redefined/valid-jsdoc')
+	'valid-jsdoc': require('./lib/rules/redefined/valid-jsdoc'),
+	'require-jsdoc': require('./lib/rules/redefined/require-jsdoc')
 };

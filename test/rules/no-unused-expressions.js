@@ -25,6 +25,18 @@ module.exports = extendToClassExpression({
 			`   }`,
 			`}`
 		)
+	}, {
+		options: [],
+		code: concat(
+			`/*`,
+			` */`,
+			`class Klass {}`,
+			``,
+			`/*`,
+			` * @type {number}`,
+			` */`,
+			`IKlass.prototype.prop;`
+		)
 	}],
 	invalid: [{
 		options: [],

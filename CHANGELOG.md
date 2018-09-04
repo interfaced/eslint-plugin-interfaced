@@ -1,5 +1,16 @@
 # Change log
 
+## 0.4.0 (release date: 11.12.2017)
+
+* Redefined `camelcase` to ignore report for arguments which name has `opt_`/`var_` prefix
+* Redefined `require-jsdoc` to consider class expressions alongside with class declarations
+* `no-unused-expressions`: consider property definitions from the prototype
+* `caps-const`, `capitalized-enum`, `capitalized-typedef`: removed fixing to avoid destructive code changes
+* New rules:
+    - `interface-name-prefix`
+    - `abstract-class-name-prefix`
+    - `no-tabs-in-jsdoc-type`
+
 ## 0.3.1 (release date: 23.11.2017)
 
 * `lines-around-class`: attach only one JSDoc to class instead of all before/after comments

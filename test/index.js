@@ -1,3 +1,4 @@
+const path = require('path');
 const RuleTester = require('eslint').RuleTester;
 const rules = require('../index').rules;
 
@@ -13,10 +14,14 @@ const ruleNames = [
 	'capitalized-enum',
 	'capitalized-typedef',
 	'event-const-desc',
+	'interface-name-prefix',
+	'abstract-class-name-prefix',
+	'camelcase',
 	'no-restricted-jsdoc-tags',
 	'no-public-underscore',
 	'no-empty-method',
 	'no-unused-expressions',
+	'no-tabs-in-jsdoc-type',
 	'lines-around-class',
 	'lines-between-methods',
 	'lines-between-props',
@@ -27,10 +32,11 @@ const ruleNames = [
 	'jsdoc-tags-order',
 	'jsdoc-type-application-dot',
 	'jsdoc-type-spacing',
-	'valid-jsdoc'
+	'valid-jsdoc',
+	'require-jsdoc'
 ];
 
 ruleNames.forEach((ruleName) => {
 	// eslint-disable-next-line global-require
-	ruleTester.run(ruleName, rules[ruleName], require('./rules/' + ruleName));
+	ruleTester.run(ruleName, rules[ruleName], require(path.join(__dirname, 'rules', ruleName)));
 });

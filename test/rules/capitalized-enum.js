@@ -26,17 +26,6 @@ module.exports = extendToClassExpression({
 			`   VALUE2: 2`,
 			`};`
 		),
-		output: concat(
-			`class Klass {}`,
-			``,
-			`/**`,
-			` * @enum {number}`,
-			` */`,
-			`Klass.Enum = {`,
-			`   VALUE1: 1,`,
-			`   VALUE2: 2`,
-			`};`
-		),
 		errors: errors(
 			`Enum "enum" is not capitalized.`
 		)

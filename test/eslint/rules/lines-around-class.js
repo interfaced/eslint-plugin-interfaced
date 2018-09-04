@@ -38,6 +38,38 @@ module.exports = extendToClassExpression({
 	}, {
 		options: [{
 			before: 2,
+			after: 2
+		}],
+		code: concat(
+			`goog.provide('Klass');`,
+			``,
+			``,
+			`function func() {`,
+			`    class Klass {}`,
+			``,
+			``,
+			`    Klass.CONST = 1;`,
+			`}`
+		)
+	}, {
+		options: [{
+			before: 2,
+			after: 2
+		}],
+		code: concat(
+			`goog.provide('Klass');`,
+			``,
+			``,
+			`block: {`,
+			`    class Klass {}`,
+			``,
+			``,
+			`    Klass.CONST = 1;`,
+			`}`
+		)
+	}, {
+		options: [{
+			before: 2,
 			after: 1,
 			collisionPriority: 'after'
 		}],
@@ -216,6 +248,39 @@ module.exports = extendToClassExpression({
 			`// Comment`,
 			``,
 			``
+		),
+		errors: errors(
+			`Amount of newlines before class should be 2, but 1 given.`,
+			`Amount of newlines after class should be 2, but 1 given.`
+		)
+	}, {
+		options: [{
+			before: 2,
+			after: 2
+		}],
+		code: concat(
+			`goog.provide('Klass');`,
+			``,
+			`function func() {`,
+			`    // Comment`,
+			``,
+			`    class Klass {}`,
+			``,
+			`    Klass.CONST = 1;`,
+			`}`
+		),
+		output: concat(
+			`goog.provide('Klass');`,
+			``,
+			`function func() {`,
+			`    // Comment`,
+			``,
+			``,
+			`    class Klass {}`,
+			``,
+			``,
+			`    Klass.CONST = 1;`,
+			`}`
 		),
 		errors: errors(
 			`Amount of newlines before class should be 2, but 1 given.`,

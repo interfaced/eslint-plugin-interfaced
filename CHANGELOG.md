@@ -1,5 +1,9 @@
 # Change log
 
+## 1.1.2 (release date: 2.08.2018)
+
+* `lines-around-class`: handle nested classes
+
 ## 1.1.1 (release date: 30.07.2018)
 
 * Use public fork of Doctrine instead of local one

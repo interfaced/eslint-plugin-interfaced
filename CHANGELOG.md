@@ -1,5 +1,10 @@
 # Change log
 
+## 0.1.2 (release date: 5.07.2017)
+
+* `space-in-typecast`: more robust implementation
+* Added handling of doctrine's parse exceptions
+
 ## 0.1.1 (release date: 29.06.2017)
 
 * `caps-const`: added handling of literals in enum

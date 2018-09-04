@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-interfaced",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "ESLint plugin with rules for approaches adopted by 'Interfaced' company",
   "author": "Kirill Dronkin (http://dronkin.ru)",
   "license": "MIT",

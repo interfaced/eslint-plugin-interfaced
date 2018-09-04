@@ -19,6 +19,14 @@ module.exports = extendToClassExpression({
 		)
 	}, {
 		code: concat(
+			`function test({opt_firstArg, opt_secondArg = 1}) {}`
+		)
+	}, {
+		code: concat(
+			`function test(...var_restArgs) {}`
+		)
+	}, {
+		code: concat(
 			`class Klass {`,
 			`   method(opt_firstArg, var_restArgs) {}`,
 			`}`

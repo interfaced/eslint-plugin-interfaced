@@ -1,5 +1,9 @@
 # Change log
 
+## 0.4.1 (release date: 11.12.2017)
+
+`camelcase`: handling of destructuring
+
 ## 0.4.0 (release date: 11.12.2017)
 
 * Redefined `camelcase` to ignore report for arguments which name has `opt_`/`var_` prefix

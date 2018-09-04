@@ -139,7 +139,6 @@ module.exports = extendToClassExpression({
 			`    */`,
 			`   constructor() {}`,
 			``,
-			``,
 			`   // Comment`,
 			``,
 			`   /**`,
@@ -155,7 +154,7 @@ module.exports = extendToClassExpression({
 			`}`
 		),
 		errors: errors(
-			`Amount of newlines between methods should be 2, but 1 given.`,
+			`Unexpected comments between methods.`,
 			`Amount of newlines between methods should be 2, but 1 given.`
 		)
 	}]

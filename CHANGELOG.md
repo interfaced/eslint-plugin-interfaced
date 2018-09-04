@@ -1,5 +1,10 @@
 # Change log
 
+## 0.3.1 (release date: 23.11.2017)
+
+* `lines-around-class`: attach only one JSDoc to class instead of all before/after comments
+* `lines-between-*`: report about unexpected comments between nodes without trying to fix it
+
 ## 0.3.0 (release date: 20.11.2017)
 
 * Required `npm@5`

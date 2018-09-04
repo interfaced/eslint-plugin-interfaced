@@ -126,5 +126,64 @@ module.exports = extendToClassExpression({
 			`Amount of newlines between static expressions should be 2, but 1 given.`,
 			`Amount of newlines between static expressions should be 2, but 1 given.`
 		)
+	}, {
+		options: [{
+			amount: 2
+		}],
+		code: concat(
+			`class Klass {}`,
+			``,
+			`/**`,
+			` * @const {number}`,
+			` */`,
+			`Klass.CONST = 1;`,
+			``,
+			`/**`,
+			` * @type {number}`,
+			` */`,
+			`Klass.prop = 1;`,
+			``,
+			`/**`,
+			` * @typedef {{item: string}}`,
+			` */`,
+			`Klass.Typedef;`,
+			``,
+			`/**`,
+			` * @enum {string}`,
+			` */`,
+			`Klass.Enum = {`,
+			`   ITEM: string`,
+			`};`
+		),
+		output: concat(
+			`class Klass {}`,
+			``,
+			`/**`,
+			` * @const {number}`,
+			` */`,
+			`Klass.CONST = 1;`,
+			``,
+			`/**`,
+			` * @type {number}`,
+			` */`,
+			`Klass.prop = 1;`,
+			``,
+			`/**`,
+			` * @typedef {{item: string}}`,
+			` */`,
+			`Klass.Typedef;`,
+			``,
+			``,
+			`/**`,
+			` * @enum {string}`,
+			` */`,
+			`Klass.Enum = {`,
+			`   ITEM: string`,
+			`};`
+		),
+		errors: errors(
+			`Unexpected code between static expressions.`,
+			`Amount of newlines between static expressions should be 2, but 1 given.`
+		)
 	}]
 });

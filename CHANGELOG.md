@@ -1,5 +1,10 @@
 # Change log
 
+## 0.2.1 (release date: 9.11.2017)
+
+* `jsdoc-tags-order`, `no-restricted-jsdoc-tags`: extended known tags by JSDoc3 and Closure Compiler
+* `lines-between-*`: report about unexpected code between nodes without trying to fix it
+
 ## 0.2.0 (release date: 31.10.2017)
 
 * Migrate to ESLint 4

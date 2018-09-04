@@ -108,5 +108,55 @@ module.exports = extendToClassExpression({
 		errors: errors(
 			`Amount of newlines between methods should be 2, but 1 given.`
 		)
+	}, {
+		options: [{
+			amount: 2
+		}],
+		code: concat(
+			`class Klass {`,
+			`   /**`,
+			`    * @override`,
+			`    */`,
+			`   constructor() {}`,
+			``,
+			`   // Comment`,
+			``,
+			`   /**`,
+			`    * @override`,
+			`    */`,
+			`   method() {}`,
+			``,
+			`   /**`,
+			`    * @override`,
+			`    */`,
+			`   anotherMethod() {}`,
+			`}`
+		),
+		output: concat(
+			`class Klass {`,
+			`   /**`,
+			`    * @override`,
+			`    */`,
+			`   constructor() {}`,
+			``,
+			``,
+			`   // Comment`,
+			``,
+			`   /**`,
+			`    * @override`,
+			`    */`,
+			`   method() {}`,
+			``,
+			``,
+			`   /**`,
+			`    * @override`,
+			`    */`,
+			`   anotherMethod() {}`,
+			`}`
+		),
+		errors: errors(
+			`Amount of newlines between methods should be 2, but 1 given.`,
+			`Amount of newlines between methods should be 2, but 1 given.`
+		)
 	}]
 });

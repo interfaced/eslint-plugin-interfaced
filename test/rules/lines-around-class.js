@@ -3,8 +3,8 @@ const {errors, concat, extendToClassExpression} = require(`../helper`);
 module.exports = extendToClassExpression({
 	valid: [{
 		options: [{
-			newlinesCountBefore: 2,
-			newlinesCountAfter: 2
+			before: 2,
+			after: 2
 		}],
 		code: concat(
 			`goog.provide('Klass');`,
@@ -17,8 +17,8 @@ module.exports = extendToClassExpression({
 		)
 	}, {
 		options: [{
-			newlinesCountBefore: 2,
-			newlinesCountAfter: 2
+			before: 2,
+			after: 2
 		}],
 		code: concat(
 			`goog.provide('Klass');`,
@@ -37,8 +37,8 @@ module.exports = extendToClassExpression({
 		)
 	}, {
 		options: [{
-			newlinesCountBefore: 2,
-			newlinesCountAfter: 1,
+			before: 2,
+			after: 1,
 			collisionPriority: 'after'
 		}],
 		code: concat(
@@ -54,8 +54,8 @@ module.exports = extendToClassExpression({
 		)
 	}, {
 		options: [{
-			newlinesCountBefore: 2,
-			newlinesCountAfter: 1,
+			before: 2,
+			after: 1,
 			collisionPriority: 'before'
 		}],
 		code: concat(
@@ -72,8 +72,8 @@ module.exports = extendToClassExpression({
 		)
 	}, {
 		options: [{
-			newlinesCountBefore: 2,
-			newlinesCountAfter: 1,
+			before: 2,
+			after: 1,
 			collisionPriority: 'after'
 		}],
 		code: concat(
@@ -95,8 +95,8 @@ module.exports = extendToClassExpression({
 		)
 	}, {
 		options: [{
-			newlinesCountBefore: 2,
-			newlinesCountAfter: 1,
+			before: 2,
+			after: 1,
 			collisionPriority: 'before'
 		}],
 		code: concat(
@@ -120,8 +120,8 @@ module.exports = extendToClassExpression({
 	}],
 	invalid: [{
 		options: [{
-			newlinesCountBefore: 2,
-			newlinesCountAfter: 2
+			before: 2,
+			after: 2
 		}],
 		code: concat(
 			`goog.provide('Klass');`,
@@ -140,13 +140,13 @@ module.exports = extendToClassExpression({
 			`Klass.CONST = 1;`
 		),
 		errors: errors(
-			`Count of newlines before class should be 2, but 1 given.`,
-			`Count of newlines after class should be 2, but 1 given.`
+			`Amount of newlines before class should be 2, but 1 given.`,
+			`Amount of newlines after class should be 2, but 1 given.`
 		)
 	}, {
 		options: [{
-			newlinesCountBefore: 2,
-			newlinesCountAfter: 2
+			before: 2,
+			after: 2
 		}],
 		code: concat(
 			`goog.provide('Klass');`,
@@ -177,8 +177,8 @@ module.exports = extendToClassExpression({
 			`Klass.CONST = 1;`
 		),
 		errors: errors(
-			`Count of newlines before class should be 2, but 1 given.`,
-			`Count of newlines after class should be 2, but 1 given.`
+			`Amount of newlines before class should be 2, but 1 given.`,
+			`Amount of newlines after class should be 2, but 1 given.`
 		)
 	}]
 });

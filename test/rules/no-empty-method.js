@@ -19,6 +19,22 @@ module.exports = extendToClassExpression({
 			`   method() {}`,
 			`}`
 		)
+	}, {
+		code: concat(
+			`class Klass {`,
+			`   method() {`,
+			`       console.log('foo');`,
+			`   }`,
+			`}`
+		)
+	}, {
+		code: concat(
+			`class Klass {`,
+			`   method() {`,
+			`       // Empty method`,
+			`   }`,
+			`}`
+		)
 	}],
 	invalid: [{
 		code: concat(

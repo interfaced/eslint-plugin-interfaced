@@ -1,9 +1,9 @@
 {
   "name": "eslint-plugin-interfaced",
-  "version": "0.1.2",
-  "description": "ESLint plugin with rules for an approaches adopted by 'Interfaced' company",
+  "version": "0.2.0",
+  "description": "ESLint plugin with rules for approaches adopted by 'Interfaced' company",
   "scripts": {
-    "lint": "eslint lib, test",
+    "lint": "eslint lib test",
     "test": "node ./test"
   },
   "author": "Kirill Dronkin (http://dronkin.ru)",
@@ -30,13 +30,13 @@
     "typecast-space"
   ],
   "peerDependencies": {
-    "eslint": "^3.19.0"
+    "eslint": "^4.9.0"
   },
   "devDependencies": {
-    "eslint": "3.19.0",
+    "eslint": "4.9.0",
     "eslint-config-interfaced": "0.1.0"
   },
   "dependencies": {
-    "doctrine": "1.2.2"
+    "doctrine": "2.0.0"
   }
 }

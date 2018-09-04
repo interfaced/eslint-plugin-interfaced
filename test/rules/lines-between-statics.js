@@ -3,7 +3,7 @@ const {errors, concat, extendToClassExpression} = require(`../helper`);
 module.exports = extendToClassExpression({
 	valid: [{
 		options: [{
-			newlinesCount: 2
+			amount: 2
 		}],
 		code: concat(
 			`class Klass {}`,
@@ -29,7 +29,7 @@ module.exports = extendToClassExpression({
 		)
 	}, {
 		options: [{
-			newlinesCount: 2
+			amount: 2
 		}],
 		code: concat(
 			`class Klass {}`,
@@ -78,7 +78,7 @@ module.exports = extendToClassExpression({
 	}],
 	invalid: [{
 		options: [{
-			newlinesCount: 2
+			amount: 2
 		}],
 		code: concat(
 			`class Klass {}`,
@@ -123,8 +123,8 @@ module.exports = extendToClassExpression({
 			`};`
 		),
 		errors: errors(
-			`Count of newlines between static expressions should be 2, but 1 given.`,
-			`Count of newlines between static expressions should be 2, but 1 given.`
+			`Amount of newlines between static expressions should be 2, but 1 given.`,
+			`Amount of newlines between static expressions should be 2, but 1 given.`
 		)
 	}]
 });

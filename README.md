@@ -2,7 +2,7 @@
 
 ***
 
-Collection of rules for an approaches adopted by "Interfaced" company
+Collection of rules for approaches adopted by "Interfaced" company
 
 ## Usage
 
@@ -114,45 +114,45 @@ Options:
 }
 ```
 
-### newline-before-after-class (fixable)
+### lines-around-class (fixable)
 
 Options:
 
 ```
 {
-	newlinesCountBefore: number,
-	newlinesCountAfter: number,
+	before: number,
+	after: number,
 	collisionPriority: string // before, after
 }
 ```
 
-### newline-between-methods (fixable)
+### lines-between-methods (fixable)
 
 Options:
 
 ```
 {
-	newlinesCount: number
+	amount: number
 }
 ```
 
-### newline-between-props (fixable)
+### lines-between-props (fixable)
 
 Options:
 
 ```
 {
-	newlinesCount: number
+	amount: number
 }
 ```
 
-### newline-between-statics (fixable)
+### lines-between-statics (fixable)
 
 Options:
 
 ```
 {
-	newlinesCount: number
+	amount: number
 }
 ```
 

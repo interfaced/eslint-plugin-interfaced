@@ -167,7 +167,7 @@ module.exports = extendToClassExpression({
 		/* eslint-disable max-len */
 		errors: errors(
 			`Method "staticPublicMethodWithoutAnnotation" is static and should be in the end of class body.`,
-			`Constructor method should be the first in the class body.`,
+			`Constructor method should be first in the class body.`,
 			`Method "_protectedMethod" (protected) should be before method "_privateMethod" (private) due to its priority.`,
 			`Method "publicMethodWithoutAnnotation" (public) should be before method "_protectedMethod" (protected) due to its priority.`,
 			`Method "overriddenPublicMethod" should be before "publicMethod" because of "overriddenPublicMethod" is overridden.`,

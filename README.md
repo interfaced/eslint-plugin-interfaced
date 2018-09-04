@@ -34,29 +34,47 @@ npm i eslint-plugin-interfaced --save-dev
 
 ## Rules
 
-### space-in-typecast (fixable)
+### typecast-spacing (fixable)
 
-No options
+Enforce space between jsdoc and parenthesis (typecast).
 
 ### caps-const (fixable)
 
-No options
+Enforce caps notation for constant names and enum properties.
+
+### capitalized-enum (fixable)
+
+Enforce capitalization of the first letter of an enum.
+
+### capitalized-typedef (fixable)
+
+Enforce capitalization of the first letter of a typedef.
 
 ### event-const-desc
 
-No options
+Enforce event description ("Fired with: ...") for event constant.
+
+### valid-jsdoc
+
+It uses [original](https://eslint.org/docs/rules/valid-jsdoc) rule, but ignores report about "function has no return statement" for interface and record methods.
 
 ### no-empty-method
 
-No options
+Disallow empty methods except abstract, interface and record methods.
 
 ### no-public-underscore
 
-No options
+Disallow methods and properties with name that starts from "_" without private/protected access modifier.
+
+### no-unused-expressions
+
+It uses [original](https://eslint.org/docs/rules/no-unused-expressions) rule, but ignores report for typedefs and property definitions.
 
 ### no-restricted-jsdoc-tags
 
-Options:
+Disallow specified JSDoc tags.
+
+**Options**:
 
 ```
 {
@@ -64,7 +82,7 @@ Options:
 }
 ```
 
-Example:
+**Example**:
 
 ```
 {
@@ -74,7 +92,9 @@ Example:
 
 ### jsdoc-tags-order
 
-Options:
+Enforce specified JSDoc tags order.
+
+**Options**:
 
 ```
 {
@@ -82,9 +102,37 @@ Options:
 }
 ```
 
+### jsdoc-type-application-dot
+
+Enforce dot before "<" symbol in JSDoc type application.
+
+**Options**:
+
+```
+string // always, never, consistent
+```
+
+### jsdoc-type-spacing
+
+Enforce consistent spacing in JSDoc type.
+
+**Options**:
+
+```
+{
+	typeApplications: string, // always, never
+	functionParams: string, // always, never
+	functionResult: string, // always, never
+	recordFields: string, // always, never
+	unionElements: string // always, never
+}
+```
+
 ### methods-order
 
-Options:
+Enforce specified methods order.
+
+**Options**:
 
 ```
 {
@@ -95,7 +143,9 @@ Options:
 
 ### props-order
 
-Options:
+Enforce specified properties order.
+
+**Options**:
 
 ```
 {
@@ -106,7 +156,9 @@ Options:
 
 ### statics-order
 
-Options:
+Enforce specified static expressions (const, enum, typedef) order.
+
+**Options**:
 
 ```
 {
@@ -116,7 +168,9 @@ Options:
 
 ### lines-around-class (fixable)
 
-Options:
+Enforce newlines before and after class.
+
+**Options**:
 
 ```
 {
@@ -128,7 +182,9 @@ Options:
 
 ### lines-between-methods (fixable)
 
-Options:
+Enforce newlines between methods.
+
+**Options**:
 
 ```
 {
@@ -138,7 +194,9 @@ Options:
 
 ### lines-between-props (fixable)
 
-Options:
+Enforce newlines between properties.
+
+**Options**:
 
 ```
 {
@@ -148,7 +206,9 @@ Options:
 
 ### lines-between-statics (fixable)
 
-Options:
+Enforce newline between static expressions (const, enum, typedef).
+
+**Options**:
 
 ```
 {
@@ -161,7 +221,6 @@ Options:
 * Enforce `super` call when method is marked by `@override`
 * Check that class name for abstract class starts with `Abstract`
 * Check that class name for interface class starts with `I`
-* Disallow `.` in generics (e.g.: `Klass.<number>` is invalid)
 * Disallow `@override` JSDoc tag for classes without extending/implementing
 * Enforce newline before/after `super` call
 * Disallow tabs in typedef

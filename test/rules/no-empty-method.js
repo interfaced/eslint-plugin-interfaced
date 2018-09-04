@@ -21,6 +21,15 @@ module.exports = extendToClassExpression({
 		)
 	}, {
 		code: concat(
+			`/**`,
+			` * @record`,
+			` */`,
+			`class Klass {`,
+			`   method() {}`,
+			`}`
+		)
+	}, {
+		code: concat(
 			`class Klass {`,
 			`   method() {`,
 			`       console.log('foo');`,

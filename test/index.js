@@ -1,5 +1,5 @@
-const rules = require('../index').rules;
 const RuleTester = require('eslint').RuleTester;
+const rules = require('../index').rules;
 
 const ruleTester = new RuleTester({
 	parserOptions: {
@@ -8,12 +8,15 @@ const ruleTester = new RuleTester({
 });
 
 const ruleNames = [
-	'space-in-typecast',
+	'typecast-spacing',
 	'caps-const',
+	'capitalized-enum',
+	'capitalized-typedef',
 	'event-const-desc',
 	'no-restricted-jsdoc-tags',
 	'no-public-underscore',
 	'no-empty-method',
+	'no-unused-expressions',
 	'lines-around-class',
 	'lines-between-methods',
 	'lines-between-props',
@@ -21,7 +24,10 @@ const ruleNames = [
 	'statics-order',
 	'props-order',
 	'methods-order',
-	'jsdoc-tags-order'
+	'jsdoc-tags-order',
+	'jsdoc-type-application-dot',
+	'jsdoc-type-spacing',
+	'valid-jsdoc'
 ];
 
 ruleNames.forEach((ruleName) => {

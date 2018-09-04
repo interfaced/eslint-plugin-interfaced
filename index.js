@@ -1,10 +1,13 @@
 module.exports.rules = {
-	'space-in-typecast': require('./lib/rules/space-in-typecast'),
+	'typecast-spacing': require('./lib/rules/typecast-spacing'),
 	'caps-const': require('./lib/rules/caps-const'),
+	'capitalized-enum': require('./lib/rules/capitalized-enum'),
+	'capitalized-typedef': require('./lib/rules/capitalized-typedef'),
 	'event-const-desc': require('./lib/rules/event-const-desc'),
 	'no-empty-method': require('./lib/rules/no-empty-method'),
 	'no-public-underscore': require('./lib/rules/no-public-underscore'),
 	'no-restricted-jsdoc-tags': require('./lib/rules/no-restricted-jsdoc-tags'),
+	'no-unused-expressions': require('./lib/rules/redefined/no-unused-expressions'),
 	'lines-between-methods': require('./lib/rules/lines-between-methods'),
 	'lines-between-props': require('./lib/rules/lines-between-props'),
 	'lines-between-statics': require('./lib/rules/lines-between-statics'),
@@ -12,5 +15,8 @@ module.exports.rules = {
 	'methods-order': require('./lib/rules/methods-order'),
 	'props-order': require('./lib/rules/props-order'),
 	'statics-order': require('./lib/rules/statics-order'),
-	'jsdoc-tags-order': require('./lib/rules/jsdoc-tags-order')
+	'jsdoc-tags-order': require('./lib/rules/jsdoc-tags-order'),
+	'jsdoc-type-application-dot': require('./lib/rules/jsdoc-type-application-dot'),
+	'jsdoc-type-spacing': require('./lib/rules/jsdoc-type-spacing'),
+	'valid-jsdoc': require('./lib/rules/redefined/valid-jsdoc')
 };

@@ -1,13 +1,17 @@
 {
   "name": "eslint-plugin-interfaced",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "ESLint plugin with rules for approaches adopted by 'Interfaced' company",
-  "scripts": {
-    "lint": "eslint lib test",
-    "test": "node ./test"
-  },
   "author": "Kirill Dronkin (http://dronkin.ru)",
   "license": "MIT",
+  "engines": {
+    "node": ">=6",
+    "npm": ">=5"
+  },
+  "scripts": {
+    "lint": "eslint lib test",
+    "test": "node test"
+  },
   "files": [
     "LICENSE",
     "README.md",
@@ -21,13 +25,17 @@
     "eslint-plugin",
     "eslintplugin",
     "interfaced",
-    "newline-between",
+    "lines-between",
+    "whitespace",
     "order",
-    "jsdoc-tags",
+    "jsdoc",
+    "jsodoc-tags",
     "const",
+    "enum",
     "empty-method",
     "public-underscore",
-    "typecast-space"
+    "typecast",
+    "type-application-dot"
   ],
   "peerDependencies": {
     "eslint": "^4.9.0"

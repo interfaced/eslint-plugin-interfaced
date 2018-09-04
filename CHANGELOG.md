@@ -1,5 +1,19 @@
 # Change log
 
+## 0.3.0 (release date: 20.11.2017)
+
+* Required `npm@5`
+* Redefined `valid-jsdoc` to ignore report about "function has no return statement" for interface and record methods
+* Redefined `no-unused-expressions` to ignore typedefs
+* `no-empty-method`: treat record (class marked by `@record`) as entity with allowed empty methods
+* `space-in-typecast`: renamed to `typecast-spacing` to be consistent with ESLint conventions
+* `jsdoc-tags-order`, `no-restricted-jsdoc-tags`: report error for jsdoc instead of its owner
+* New rules:
+    - `jsdoc-type-spacing`
+    - `jsdoc-type-application-dot`
+    - `capitalized-enum`
+    - `capitalized-typedef`
+    
 ## 0.2.1 (release date: 9.11.2017)
 
 * `jsdoc-tags-order`, `no-restricted-jsdoc-tags`: extended known tags by JSDoc3 and Closure Compiler

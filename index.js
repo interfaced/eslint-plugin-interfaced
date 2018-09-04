@@ -23,5 +23,8 @@ module.exports.rules = {
 	'jsdoc-type-application-dot': require('./lib/rules/jsdoc-type-application-dot'),
 	'jsdoc-type-spacing': require('./lib/rules/jsdoc-type-spacing'),
 	'valid-jsdoc': require('./lib/rules/redefined/valid-jsdoc'),
-	'require-jsdoc': require('./lib/rules/redefined/require-jsdoc')
+	'require-jsdoc': require('./lib/rules/redefined/require-jsdoc'),
+	'prefer-shorthand-jsdoc-types': require('./lib/rules/prefer-shorthand-jsdoc-types'),
+	'prevent-unused-typedef-vars': require('./lib/rules/prevent-unused-typedef-vars'),
+	'prevent-unused-meta-params': require('./lib/rules/prevent-unused-meta-params')
 };

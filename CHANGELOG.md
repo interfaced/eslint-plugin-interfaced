@@ -1,5 +1,12 @@
 # Change log
 
+## 0.5.0 (release date: 15.01.2018)
+
+* New rules:
+    - `prefer-shorthand-jsdoc-types`
+    - `prevent-unused-typedef-vars`
+    - `prevent-unused-meta-params`
+
 ## 0.4.1 (release date: 11.12.2017)
 
 `camelcase`: handling of destructuring

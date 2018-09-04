@@ -62,6 +62,14 @@ Enforce "I" prefix for interface names
 
 Enforce event description ("Fired with: ...") for event constant
 
+### prevent-unused-typedef-vars
+
+Prevent typedef variables to be marked as unused
+
+### prevent-unused-meta-params
+
+Prevent interface, record, abstract or override method params to be marked as unused
+
 ### no-empty-method
 
 Disallow empty methods except abstract, interface and record methods
@@ -129,6 +137,19 @@ Enforce consistent spacing in JSDoc type
 	functionResult: string, // always, never
 	recordFields: string, // always, never
 	unionElements: string // always, never
+}
+```
+
+### prefer-shorthand-jsdoc-types
+
+Require usage of shorthand notation for some JSDoc types when possible
+
+**Options**:
+
+```
+{
+	optionalParam: string, // always, never
+	nullableType: string // always, never
 }
 ```
 

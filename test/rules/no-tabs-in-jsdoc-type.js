@@ -74,8 +74,8 @@ module.exports = extendToClassExpression({
 			`Klass.Typedef;`
 		),
 		errors: errors(
-			'Unexpected tab character in type of @type',
-			'Unexpected tab character in type of @typedef'
+			'Unexpected tab character in type of @type.',
+			'Unexpected tab character in type of @typedef.'
 		)
 	}]
 });

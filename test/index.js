@@ -1,6 +1,7 @@
 const path = require('path');
-const RuleTester = require('eslint').RuleTester;
-const rules = require('../index').rules;
+const {RuleTester} = require('eslint');
+const {rules} = require('../index');
+const {prependText} = require('./helper');
 
 const ruleTester = new RuleTester({
 	parserOptions: {
@@ -33,10 +34,29 @@ const ruleNames = [
 	'jsdoc-type-application-dot',
 	'jsdoc-type-spacing',
 	'valid-jsdoc',
-	'require-jsdoc'
+	'require-jsdoc',
+	'prefer-shorthand-jsdoc-types'
 ];
 
 ruleNames.forEach((ruleName) => {
 	// eslint-disable-next-line global-require
 	ruleTester.run(ruleName, rules[ruleName], require(path.join(__dirname, 'rules', ruleName)));
+});
+
+const preventUnusedRules = [
+	'prevent-unused-typedef-vars',
+	'prevent-unused-meta-params'
+];
+
+preventUnusedRules.forEach((ruleName) => {
+	ruleTester.linter.defineRule(ruleName, rules[ruleName]);
+
+	ruleTester.run(
+		'no-unused-vars',
+		require('eslint/lib/rules/no-unused-vars'), // eslint-disable-line global-require
+		prependText(
+			`/* eslint ${ruleName}: 1 */\n`,
+			require(path.join(__dirname, 'rules', ruleName)) // eslint-disable-line global-require
+		)
+	);
 });

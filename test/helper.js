@@ -37,5 +37,25 @@ module.exports = {
 		extendToClassExpressionIfPossible(test.invalid);
 
 		return test;
+	},
+
+	prependText: (text, test) => {
+		function prepend(testCases) {
+			testCases.slice()
+				.forEach((testCase) => {
+					if (testCase.code) {
+						testCase.code = text + testCase.code;
+					}
+
+					if (testCase.output) {
+						testCase.output = text + testCase.output;
+					}
+				});
+		}
+
+		prepend(test.valid);
+		prepend(test.invalid);
+
+		return test;
 	}
 };

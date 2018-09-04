@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-interfaced",
-  "version": "0.4.1",
+  "version": "0.5.0",
   "description": "ESLint plugin with rules for approaches adopted by 'Interfaced' company",
   "author": "Kirill Dronkin (http://dronkin.ru)",
   "license": "MIT",
@@ -32,13 +32,13 @@
     "jsodoc-tags",
     "const",
     "enum",
+    "typedef",
     "empty-method",
-    "public-underscore",
     "typecast",
     "type-application-dot"
   ],
   "peerDependencies": {
-    "eslint": "^4.9.0"
+    "eslint": "^4.0.0"
   },
   "devDependencies": {
     "eslint": "4.9.0",

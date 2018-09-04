@@ -1,5 +1,9 @@
 # Change log
 
+## 1.1.1 (release date: 30.07.2018)
+
+* Use public fork of Doctrine instead of local one
+
 ## 1.1.0 (release date: 13.07.2018)
 
 * `lines-around-class`: use `1` as the default value for `before` and `after`

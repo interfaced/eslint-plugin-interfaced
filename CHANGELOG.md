@@ -1,5 +1,16 @@
 # Change log
 
+## 1.1.0 (release date: 13.07.2018)
+
+* `lines-around-class`: use `1` as the default value for `before` and `after`
+* `prefer-shorthand-jsdoc-types`: auto fixing; removed `consistent` option
+* `jsdoc-type-spacing`: auto fixing; completely new options (see docs/rules/jsdoc-type-spacing)
+* `jsdoc-type-application-dot`: auto fixing
+* `jsdoc-tags-order`: auto fixing
+
+* JSDoc tokenization
+* Rules documentation is separated and extended
+
 ## 1.0.0 (release date: 27.06.2018)
 
 * `eslint@5`
@@ -25,7 +36,7 @@
 ## 0.4.0 (release date: 11.12.2017)
 
 * `no-unused-expressions`: consider property definitions from the prototype
-* `caps-const`, `capitalized-enum`, `capitalized-typedef`: removed fixing to avoid destructive code changes
+* `caps-const`, `capitalized-enum`, `capitalized-typedef`: removed auto fixing to avoid destructive code changes
 
 * New rules:
     - `interface-name-prefix`

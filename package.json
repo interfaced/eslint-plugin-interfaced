@@ -1,7 +1,7 @@
 {
   "name": "eslint-plugin-interfaced",
-  "version": "1.0.0",
-  "description": "ESLint plugin with rules for approaches adopted by Interfaced company",
+  "version": "1.1.0",
+  "description": "ESLint plugin with rules for the approaches adopted by Interfaced company",
   "license": "MIT",
   "author": "Interfaced (http://interfaced.tv)",
   "contributors": [
@@ -14,14 +14,18 @@
   },
   "scripts": {
     "lint": "eslint lib test",
-    "test": "node test"
+    "test": "npm run test.eslint && npm run test.unit",
+    "test.eslint": "node test/eslint",
+    "test.unit": "mocha test/unit"
   },
   "files": [
     "LICENSE",
     "README.md",
     "CHANGELOG.md",
     "index.js",
-    "lib"
+    "lib",
+    "docs",
+    "packages"
   ],
   "keywords": [
     "lint",
@@ -42,10 +46,13 @@
     "eslint": "^5.0.0"
   },
   "devDependencies": {
-    "eslint": "^5.0.1",
-    "eslint-config-interfaced": "0.1.0"
+    "chai": "4.1.2",
+    "eslint": "5.0.1",
+    "eslint-config-interfaced": "0.1.0",
+    "mocha": "5.2.0"
   },
   "dependencies": {
-    "doctrine": "2.0.0"
+    "doctrine": "file:packages/doctrine",
+    "esutils": "2.0.2"
   }
 }

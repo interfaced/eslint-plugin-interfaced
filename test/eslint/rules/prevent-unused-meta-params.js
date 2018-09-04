@@ -1,6 +1,6 @@
-const {errors, concat} = require(`../helper`);
+const {errors, concat, extendToClassExpression} = require(`../helper`);
 
-module.exports = {
+module.exports = extendToClassExpression({
 	valid: [{
 		code: concat(
 			`/**`,
@@ -62,4 +62,4 @@ module.exports = {
 			`'arg2' is defined but never used.`
 		)
 	}]
-};
+});

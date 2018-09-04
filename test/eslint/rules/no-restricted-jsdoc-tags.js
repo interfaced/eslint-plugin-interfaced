@@ -1,14 +1,13 @@
-const {errors, concat, extendToClassExpression} = require(`../helper`);
+const {errors, concat} = require(`../helper`);
 
-module.exports = extendToClassExpression({
+module.exports = {
 	valid: [{
 		options: [{
 			tags: ['extends']
 		}],
 		code: concat(
 			`/**`,
-			` */`,
-			`class Klass {}`
+			` */`
 		)
 	}, {
 		options: [{
@@ -18,8 +17,7 @@ module.exports = extendToClassExpression({
 			`/**`,
 			` * @interface`,
 			` * @extends {AnotherKlass}`,
-			` */`,
-			`class Klass {}`
+			` */`
 		)
 	}, {
 		options: [{
@@ -28,8 +26,7 @@ module.exports = extendToClassExpression({
 		code: concat(
 			`/**`,
 			` * @extends {AnotherKlass<number>}`,
-			` */`,
-			`class Klass extends AnotherKlass {}`
+			` */`
 		)
 	}],
 	invalid: [{
@@ -39,8 +36,7 @@ module.exports = extendToClassExpression({
 		code: concat(
 			`/**`,
 			` * @extends {AnotherKlass}`,
-			` */`,
-			`class Klass extends AnotherKlass {}`
+			` */`
 		),
 		errors: errors(
 			`JSDoc tag "extends" is not allowed.`
@@ -52,8 +48,7 @@ module.exports = extendToClassExpression({
 		code: concat(
 			`/**`,
 			` * @extends {AnotherKlass}`,
-			` */`,
-			`class Klass {}`
+			` */`
 		),
 		errors: errors(
 			`JSDoc tag "extends" is not allowed. This tags allowed only with tag "interface".`
@@ -65,11 +60,10 @@ module.exports = extendToClassExpression({
 		code: concat(
 			`/**`,
 			` * @extends {AnotherKlass}`,
-			` */`,
-			`class Klass extends AnotherKlass {}`
+			` */`
 		),
 		errors: errors(
 			`JSDoc tag "extends" is not allowed. This tags allowed only with type "TypeApplication".`
 		)
 	}]
-});
+};

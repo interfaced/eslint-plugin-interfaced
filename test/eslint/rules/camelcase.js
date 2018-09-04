@@ -7,7 +7,7 @@ module.exports = extendToClassExpression({
 		)
 	}, {
 		code: concat(
-			`const test = function (opt_firstArg, var_restArgs) {}`
+			`const test = function(opt_firstArg, var_restArgs) {}`
 		)
 	}, {
 		code: concat(

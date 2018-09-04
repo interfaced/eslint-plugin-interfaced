@@ -1,9 +1,24 @@
 module.exports = {
+	/**
+	 * @param {...string} args
+	 * @return {Array<{message: string}>}
+	 */
 	errors: (...args) => args.map((msg) => ({message: msg})),
 
+	/**
+	 * @param {...string} args
+	 * @return {string}
+	 */
 	concat: (...args) => args.join('\n'),
 
+	/**
+	 * @param {{valid: Array, invalid: Array}} test
+	 * @return {{valid: Array, invalid: Array}}
+	 */
 	extendToClassExpression: (test) => {
+		/**
+		 * @param {Array} testCases
+		 */
 		function extendToClassExpressionIfPossible(testCases) {
 			testCases.slice()
 				.forEach((testCase) => {
@@ -39,7 +54,15 @@ module.exports = {
 		return test;
 	},
 
+	/**
+	 * @param {string} text
+	 * @param {{valid: Array, invalid: Array}} test
+	 * @return {{valid: Array, invalid: Array}}
+	 */
 	prependText: (text, test) => {
+		/**
+		 * @param {Array} testCases
+		 */
 		function prepend(testCases) {
 			testCases.slice()
 				.forEach((testCase) => {

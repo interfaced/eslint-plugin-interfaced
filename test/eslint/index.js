@@ -1,6 +1,6 @@
 const path = require('path');
 const {RuleTester} = require('eslint');
-const {rules} = require('../index');
+const {rules} = require('../../index');
 const {prependText} = require('./helper');
 
 const ruleTester = new RuleTester({

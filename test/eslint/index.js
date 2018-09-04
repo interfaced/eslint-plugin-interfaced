@@ -9,11 +9,15 @@ const ruleTester = new RuleTester({
 	}
 });
 
+// Add the alignment for multiline code
+RuleTester.it = (title, fn) => it(title.replace(/\n/g, `\n${Array(11).join(' ')}`), fn);
+
 const ruleNames = [
-	'camelcase',
-	'no-unused-expressions',
-	'require-jsdoc',
-	'valid-jsdoc',
+	'redefined/camelcase',
+	'redefined/no-param-reassign',
+	'redefined/no-unused-expressions',
+	'redefined/require-jsdoc',
+	'redefined/valid-jsdoc',
 
 	'abstract-class-name-prefix',
 	'capitalized-enum',
@@ -45,20 +49,24 @@ const preventUnusedRuleName = [
 	'prevent-unused-meta-params'
 ];
 
-ruleNames.forEach((ruleName) => {
-	// eslint-disable-next-line global-require
-	ruleTester.run(ruleName, rules[ruleName], require(path.join(__dirname, 'rules', ruleName)));
-});
+describe('Rules', () => {
+	ruleNames.forEach((ruleName) => {
+		const rule = rules[ruleName.split('/').pop()];
 
-preventUnusedRuleName.forEach((ruleName) => {
-	ruleTester.linter.defineRule(ruleName, rules[ruleName]);
+		// eslint-disable-next-line global-require
+		ruleTester.run(ruleName, rule, require(path.join(__dirname, 'rules', ruleName)));
+	});
 
-	ruleTester.run(
-		'no-unused-vars',
-		require('eslint/lib/rules/no-unused-vars'), // eslint-disable-line global-require
-		prependText(
-			`/* eslint ${ruleName}: 1 */\n`,
-			require(path.join(__dirname, 'rules', ruleName)) // eslint-disable-line global-require
-		)
-	);
+	preventUnusedRuleName.forEach((ruleName) => {
+		ruleTester.linter.defineRule(ruleName, rules[ruleName]);
+
+		ruleTester.run(
+			'no-unused-vars',
+			require('eslint/lib/rules/no-unused-vars'), // eslint-disable-line global-require
+			prependText(
+				`/* eslint ${ruleName}: 1 */\n`,
+				require(path.join(__dirname, 'rules', ruleName)) // eslint-disable-line global-require
+			)
+		);
+	});
 });

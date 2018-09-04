@@ -17,4 +17,4 @@ but does when `interfaced/require-jsdoc` is used.
 
 * [Original](https://eslint.org/docs/rules/require-jsdoc)
 * [Source](../../lib/rules/redefined/require-jsdoc.js)
-* [Tests](../../test/eslint/rules/require-jsdoc.js)
+* [Tests](../../test/eslint/rules/redefined/require-jsdoc.js)

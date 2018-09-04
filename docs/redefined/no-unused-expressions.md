@@ -30,4 +30,4 @@ but doesn't when `interfaced/no-unused-expressions` is used.
 
 * [Original](https://eslint.org/docs/rules/no-unused-expressions)
 * [Source](../../lib/rules/redefined/no-unused-expressions.js)
-* [Tests](../../test/eslint/rules/no-unused-expressions.js)
+* [Tests](../../test/eslint/rules/redefined/no-unused-expressions.js)

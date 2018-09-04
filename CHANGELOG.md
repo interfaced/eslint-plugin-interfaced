@@ -1,5 +1,10 @@
 # Change log
 
+## 1.2.0 (release date: 30.08.2018)
+
+* New redefinitions:
+    - `no-param-reassign` to ignore report for self assignment with typecast
+
 ## 1.1.2 (release date: 2.08.2018)
 
 * `lines-around-class`: handle nested classes

@@ -1,4 +1,4 @@
-const {errors, concat, extendToClassExpression} = require(`../helper`);
+const {errors, concat, extendToClassExpression} = require(`../../helper`);
 
 module.exports = extendToClassExpression({
 	valid: [{

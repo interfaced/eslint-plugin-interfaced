@@ -1,8 +1,7 @@
-const {errors, concat, extendToClassExpression} = require(`../helper`);
+const {errors, concat, extendToClassExpression} = require(`../../helper`);
 
 module.exports = extendToClassExpression({
 	valid: [{
-		options: [],
 		code: concat(
 			`class Klass {}`,
 			``,
@@ -12,7 +11,6 @@ module.exports = extendToClassExpression({
 			`Klass.Typedef;`
 		)
 	}, {
-		options: [],
 		code: concat(
 			`class Klass {`,
 			`   constructor() {`,
@@ -26,7 +24,6 @@ module.exports = extendToClassExpression({
 			`}`
 		)
 	}, {
-		options: [],
 		code: concat(
 			`/*`,
 			` */`,
@@ -39,7 +36,6 @@ module.exports = extendToClassExpression({
 		)
 	}],
 	invalid: [{
-		options: [],
 		code: concat(
 			`class Klass {}`,
 			``,
@@ -51,7 +47,6 @@ module.exports = extendToClassExpression({
 			`Expected an assignment or function call and instead saw an expression.`
 		)
 	}, {
-		options: [],
 		code: concat(
 			`class Klass {`,
 			`   method() {`,

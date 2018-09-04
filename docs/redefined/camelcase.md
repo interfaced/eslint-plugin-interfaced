@@ -16,4 +16,4 @@ but doesn't when `interfaced/camelcase` is used.
 
 * [Original](https://eslint.org/docs/rules/camelcase)
 * [Source](../../lib/rules/redefined/camelcase.js)
-* [Tests](../../test/eslint/rules/camelcase.js)
+* [Tests](../../test/eslint/rules/redefined/camelcase.js)

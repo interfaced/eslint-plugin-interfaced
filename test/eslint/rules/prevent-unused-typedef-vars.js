@@ -2,7 +2,6 @@ const {errors, concat} = require(`../helper`);
 
 module.exports = {
 	valid: [{
-		options: [],
 		code: concat(
 			`/**`,
 			` * @typedef {{item: string}}`,
@@ -10,7 +9,6 @@ module.exports = {
 			`let Typedef;`
 		)
 	}, {
-		options: [],
 		code: concat(
 			`/**`,
 			` * @typedef {{item: string}}`,
@@ -19,7 +17,6 @@ module.exports = {
 		)
 	}],
 	invalid: [{
-		options: [],
 		code: concat(
 			`/**`,
 			` */`,

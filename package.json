@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-interfaced",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "ESLint plugin with rules for the approaches adopted by Interfaced company",
   "license": "MIT",
   "author": "Interfaced (http://interfaced.tv)",
@@ -15,7 +15,7 @@
   "scripts": {
     "lint": "eslint lib test",
     "test": "npm run test.eslint && npm run test.unit",
-    "test.eslint": "node test/eslint",
+    "test.eslint": "mocha test/eslint",
     "test.unit": "mocha test/unit"
   },
   "files": [

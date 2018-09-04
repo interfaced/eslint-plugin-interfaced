@@ -64,6 +64,7 @@ Some useful rules which are provided by ESLint are slightly inappropriate for Cl
 so we redefine them with some adjusting for our requirements.
 
 * [interfaced/camelcase](docs/redefined/camelcase.md)
+* [interfaced/no-param-reassign](docs/redefined/no-param-reassign.md)
 * [interfaced/no-unused-expressions](docs/redefined/no-unused-expressions.md)
 * [interfaced/require-jsdoc](docs/redefined/require-jsdoc.md)
 * [interfaced/valid-jsdoc](docs/redefined/valid-jsdoc.md)

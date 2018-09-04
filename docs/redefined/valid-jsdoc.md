@@ -24,4 +24,4 @@ but doesn't when `interfaced/valid-jsdoc` is used.
 
 * [Original](https://eslint.org/docs/rules/valid-jsdoc)
 * [Source](../../lib/rules/redefined/valid-jsdoc.js)
-* [Tests](../../test/eslint/rules/valid-jsdoc.js)
+* [Tests](../../test/eslint/rules/redefined/valid-jsdoc.js)

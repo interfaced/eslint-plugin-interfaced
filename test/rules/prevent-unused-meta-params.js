@@ -58,6 +58,7 @@ module.exports = {
 			`window.Klass = Klass;`
 		),
 		errors: errors(
+			`'arg1' is defined but never used.`,
 			`'arg2' is defined but never used.`
 		)
 	}]

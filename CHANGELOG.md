@@ -1,5 +1,9 @@
 # Change log
 
+## 1.0.0 (release date: 27.06.2018)
+
+* `eslint@5`
+
 ## 0.6.0 (release date: 20.06.2018)
 
 * `prefer-shorthand-jsdoc-types`: handle params without type

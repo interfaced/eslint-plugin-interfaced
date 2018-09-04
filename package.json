@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-interfaced",
-  "version": "0.6.0",
+  "version": "1.0.0",
   "description": "ESLint plugin with rules for approaches adopted by Interfaced company",
   "license": "MIT",
   "author": "Interfaced (http://interfaced.tv)",
@@ -39,10 +39,10 @@
     "typecast"
   ],
   "peerDependencies": {
-    "eslint": "^4.0.0"
+    "eslint": "^5.0.0"
   },
   "devDependencies": {
-    "eslint": "4.9.0",
+    "eslint": "^5.0.1",
     "eslint-config-interfaced": "0.1.0"
   },
   "dependencies": {

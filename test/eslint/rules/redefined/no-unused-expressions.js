@@ -1,14 +1,17 @@
-const {errors, concat, extendToClassExpression} = require(`../../helper`);
+const {errors, concat, extendClassDeclarations} = require(`../../helper`);
 
-module.exports = extendToClassExpression({
+module.exports = extendClassDeclarations({
 	valid: [{
 		code: concat(
-			`class Klass {}`,
+			`/**`,
+			` * @typedef {{item: string}}`,
+			` */`,
+			`let Typedef1;`,
 			``,
 			`/**`,
 			` * @typedef {{item: string}}`,
 			` */`,
-			`Klass.Typedef;`
+			`ns.Typedef2;`
 		)
 	}, {
 		code: concat(
@@ -18,8 +21,6 @@ module.exports = extendToClassExpression({
 			`        * @type {number}`,
 			`        */`,
 			`       this.prop;`,
-			``,
-			`       this.initProp();`,
 			`   }`,
 			`}`
 		)
@@ -27,21 +28,23 @@ module.exports = extendToClassExpression({
 		code: concat(
 			`/*`,
 			` */`,
-			`class Klass {}`,
+			`function Klass() {}`,
 			``,
 			`/*`,
 			` * @type {number}`,
 			` */`,
-			`IKlass.prototype.prop;`
+			`Klass.prototype.prop;`
 		)
 	}],
 	invalid: [{
 		code: concat(
-			`class Klass {}`,
+			`/**`,
+			` */`,
+			`let Unused1;`,
 			``,
 			`/**`,
 			` */`,
-			`Klass.Unused;`
+			`ns.Unused2;`
 		),
 		errors: errors(
 			`Expected an assignment or function call and instead saw an expression.`

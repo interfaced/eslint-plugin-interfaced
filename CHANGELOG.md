@@ -1,5 +1,13 @@
 # Change log
 
+## 1.3.0 (release date: 28.09.2018)
+
+* `jsdoc-type-spacing`: tolerate multiline types
+* `lines-around-class`: fixed scope handling for node environment
+* `lines-between-statics`: don't group static expressions [BREAKING]
+
+* Handle class and static expressions defined through a variable declaration
+
 ## 1.2.0 (release date: 30.08.2018)
 
 * New redefinitions:

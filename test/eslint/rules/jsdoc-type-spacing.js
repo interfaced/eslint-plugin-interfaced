@@ -186,6 +186,14 @@ module.exports = {
 			` * @return {{`,
 			` *     field:number`,
 			` * }}`,
+			` */`,
+
+			`/**`,
+			` * @return {{`,
+			` *     field:{`,
+			` *         subField:number`,
+			` *     }`,
+			` * }}`,
 			` */`
 		)
 	}, {
@@ -200,6 +208,14 @@ module.exports = {
 			`/**`,
 			` * @return {{`,
 			` *     field:number`,
+			` * }}`,
+			` */`,
+
+			`/**`,
+			` * @return {{`,
+			` *     field:{`,
+			` *         subField:number`,
+			` *     }`,
 			` * }}`,
 			` */`
 		)

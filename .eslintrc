@@ -1,3 +1,9 @@
 {
-  "extends": "interfaced"
+  "extends": "interfaced",
+  "overrides": [{
+    "files": ["test/**"],
+    "env": {
+      "mocha": true
+    }
+  }]
 }

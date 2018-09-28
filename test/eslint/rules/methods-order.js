@@ -1,6 +1,6 @@
-const {errors, concat, extendToClassExpression} = require(`../helper`);
+const {errors, concat, extendClassDeclarations} = require(`../helper`);
 
-module.exports = extendToClassExpression({
+module.exports = extendClassDeclarations({
 	valid: [{
 		options: [{
 			scopesOrder: ['public', 'protected', 'private'],

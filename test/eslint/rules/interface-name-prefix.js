@@ -1,21 +1,12 @@
-const {errors, concat, extendToClassExpression} = require(`../helper`);
+const {errors, concat, extendClassDeclarations} = require(`../helper`);
 
-module.exports = extendToClassExpression({
+module.exports = extendClassDeclarations({
 	valid: [{
 		code: concat(
 			`/**`,
 			` * @interface`,
 			` */`,
 			`class IKlass {`,
-			`   constructor() {}`,
-			`}`
-		)
-	}, {
-		code: concat(
-			`/**`,
-			` * @interface`,
-			` */`,
-			`one.two.IKlass = class {`,
 			`   constructor() {}`,
 			`}`
 		)
@@ -26,18 +17,6 @@ module.exports = extendToClassExpression({
 			` * @interface`,
 			` */`,
 			`class Klass {`,
-			`   constructor() {}`,
-			`}`
-		),
-		errors: errors(
-			'Interface name "Klass" should start with "I".'
-		)
-	}, {
-		code: concat(
-			`/**`,
-			` * @interface`,
-			` */`,
-			`one.two.Klass = class {`,
 			`   constructor() {}`,
 			`}`
 		),

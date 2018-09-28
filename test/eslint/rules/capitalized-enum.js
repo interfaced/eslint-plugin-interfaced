@@ -1,14 +1,20 @@
-const {errors, concat, extendToClassExpression} = require(`../helper`);
+const {errors, concat} = require(`../helper`);
 
-module.exports = extendToClassExpression({
+module.exports = {
 	valid: [{
 		code: concat(
-			`class Klass {}`,
+			`/**`,
+			` * @enum {number}`,
+			` */`,
+			`ns.Enum1 = {`,
+			`   VALUE1: 1,`,
+			`   VALUE2: 2`,
+			`};`,
 			``,
 			`/**`,
 			` * @enum {number}`,
 			` */`,
-			`Klass.Enum = {`,
+			`let Enum2 = {`,
 			`   VALUE1: 1,`,
 			`   VALUE2: 2`,
 			`};`
@@ -16,18 +22,25 @@ module.exports = extendToClassExpression({
 	}],
 	invalid: [{
 		code: concat(
-			`class Klass {}`,
+			`/**`,
+			` * @enum {number}`,
+			` */`,
+			`ns.enum1 = {`,
+			`   VALUE1: 1,`,
+			`   VALUE2: 2`,
+			`};`,
 			``,
 			`/**`,
 			` * @enum {number}`,
 			` */`,
-			`Klass.enum = {`,
+			`let enum2 = {`,
 			`   VALUE1: 1,`,
 			`   VALUE2: 2`,
 			`};`
 		),
 		errors: errors(
-			`Enum "enum" is not capitalized.`
+			`Enum "enum1" is not capitalized.`,
+			`Enum "enum2" is not capitalized.`
 		)
 	}]
-});
+};

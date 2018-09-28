@@ -1,6 +1,6 @@
-const {errors, concat, extendToClassExpression} = require(`../helper`);
+const {errors, concat, extendClassDeclarations} = require(`../helper`);
 
-module.exports = extendToClassExpression({
+module.exports = extendClassDeclarations({
 	valid: [{
 		code: concat(
 			`/**`,
@@ -10,7 +10,7 @@ module.exports = extendToClassExpression({
 			`   method(arg1, arg2) {}`,
 			`}`,
 			``,
-			`window.Klass = Klass;`
+			`new Klass();`
 		)
 	}, {
 		code: concat(
@@ -21,7 +21,7 @@ module.exports = extendToClassExpression({
 			`   method(arg1, arg2) {}`,
 			`}`,
 			``,
-			`window.Klass = Klass;`
+			`new Klass();`
 		)
 	}, {
 		code: concat(
@@ -35,18 +35,18 @@ module.exports = extendToClassExpression({
 			`   method(arg1, arg2) {}`,
 			`}`,
 			``,
-			`window.Klass = Klass;`
+			`new Klass();`
 		)
 	}, {
 		code: concat(
-			`class Klass extends Klass2 {`,
+			`class Klass1 extends Klass2 {`,
 			`   /**`,
 			`    * @override`,
 			`    */`,
 			`   method(arg1, arg2) {}`,
 			`}`,
 			``,
-			`window.Klass = Klass;`
+			`new Klass1();`
 		)
 	}],
 	invalid: [{
@@ -55,7 +55,7 @@ module.exports = extendToClassExpression({
 			`   method(arg1, arg2) {}`,
 			`}`,
 			``,
-			`window.Klass = Klass;`
+			`new Klass();`
 		),
 		errors: errors(
 			`'arg1' is defined but never used.`,

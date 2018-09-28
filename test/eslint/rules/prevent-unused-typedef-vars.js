@@ -25,5 +25,14 @@ module.exports = {
 		errors: errors(
 			`'Typedef' is defined but never used.`
 		)
+	}, {
+		code: concat(
+			`/**`,
+			` */`,
+			`var Typedef;`
+		),
+		errors: errors(
+			`'Typedef' is defined but never used.`
+		)
 	}]
 };

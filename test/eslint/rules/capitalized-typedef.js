@@ -1,27 +1,35 @@
-const {errors, concat, extendToClassExpression} = require(`../helper`);
+const {errors, concat} = require(`../helper`);
 
-module.exports = extendToClassExpression({
+module.exports = {
 	valid: [{
 		code: concat(
-			`class Klass {}`,
+			`/**`,
+			` * @typedef {number}`,
+			` */`,
+			`let Typedef1;`,
 			``,
 			`/**`,
 			` * @typedef {number}`,
 			` */`,
-			`Klass.Typedef;`
+			`ns.Typedef2;`
 		)
 	}],
 	invalid: [{
 		code: concat(
-			`class Klass {}`,
+			`/**`,
+			` * @typedef {number}`,
+			` */`,
+			`let typedef1;`,
+			``,
 			``,
 			`/**`,
 			` * @typedef {number}`,
 			` */`,
-			`Klass.typedef;`
+			`ns.typedef2;`
 		),
 		errors: errors(
-			`Typedef "typedef" is not capitalized.`
+			`Typedef "typedef1" is not capitalized.`,
+			`Typedef "typedef2" is not capitalized.`
 		)
 	}]
-});
+};

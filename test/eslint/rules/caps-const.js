@@ -1,6 +1,6 @@
-const {errors, concat, extendToClassExpression} = require(`../helper`);
+const {errors, concat, extendClassDeclarations} = require(`../helper`);
 
-module.exports = extendToClassExpression({
+module.exports = extendClassDeclarations({
 	valid: [{
 		code: concat(
 			`class Klass {`,
@@ -24,12 +24,10 @@ module.exports = extendToClassExpression({
 		)
 	}, {
 		code: concat(
-			`class Klass {}`,
-			``,
 			`/**`,
 			` * @enum {number}`,
 			` */`,
-			`Klass.Enum = {`,
+			`ns.Enum = {`,
 			`   VALUE: 1,`,
 			`   'VALUE_TWO': 2,`,
 			`   'VALUE_THREE': 3,`,
@@ -38,34 +36,30 @@ module.exports = extendToClassExpression({
 		)
 	}, {
 		code: concat(
-			`class Klass {}`,
-			``,
 			`/**`,
 			` * @enum {number}`,
 			` */`,
-			`Klass.Enum = {`,
+			`ns.Enum = {`,
 			`   [value]: 1,`,
 			`   [obj.prop]: 2`,
 			`};`
 		)
 	}, {
 		code: concat(
-			`class Klass {}`,
+			`/**`,
+			` * @const {number}`,
+			` */`,
+			`ns.CONST = 1;`,
 			``,
 			`/**`,
 			` * @const {number}`,
 			` */`,
-			`Klass.CONST = 1;`,
+			`ns.CONST_TWO = 2;`,
 			``,
 			`/**`,
 			` * @const {number}`,
 			` */`,
-			`Klass.CONST_TWO = 2;`,
-			``,
-			`/**`,
-			` * @const {number}`,
-			` */`,
-			`Klass.CONST3 = 3;`
+			`ns.CONST3 = 3;`
 		)
 	}],
 	invalid: [{
@@ -84,12 +78,10 @@ module.exports = extendToClassExpression({
 		)
 	}, {
 		code: concat(
-			`class Klass {}`,
-			``,
 			`/**`,
 			` * @enum {number}`,
 			` */`,
-			`Klass.Enum = {`,
+			`ns.Enum = {`,
 			`   VALUE_one: 1,`,
 			`   'value_TWO': 2`,
 			`};`
@@ -100,12 +92,10 @@ module.exports = extendToClassExpression({
 		)
 	}, {
 		code: concat(
-			`class Klass {}`,
-			``,
 			`/**`,
 			` * @const {number}`,
 			` */`,
-			`Klass.const = 1;`
+			`ns.const = 1;`
 		),
 		errors: errors(
 			`Constant "const" is not in caps notation.`

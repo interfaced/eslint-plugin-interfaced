@@ -1,9 +1,10 @@
 {
   "name": "eslint-plugin-interfaced",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "ESLint plugin with rules for the approaches adopted by Interfaced company",
   "license": "MIT",
   "author": "Interfaced (http://interfaced.tv)",
+  "homepage": "https://github.com/interfaced/eslint-plugin-interfaced",
   "contributors": [
     "Kirill Dronkin <kirilldronkin@gmail.com>",
     "Goryaynov Igor <ygreknomean@gmail.com>"
@@ -13,6 +14,7 @@
     "npm": ">=5"
   },
   "scripts": {
+    "postpublish": "github-publish --project=eslint-plugin-interfaced --tag=$npm_package_version",
     "lint": "eslint lib test",
     "test": "npm run test.eslint && npm run test.unit",
     "test.eslint": "mocha test/eslint",

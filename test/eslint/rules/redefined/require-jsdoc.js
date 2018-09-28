@@ -10,7 +10,11 @@ module.exports = {
 		code: concat(
 			`/**`,
 			` */`,
-			`Klass = class {}`
+			`Klass1 = class {}`,
+			``,
+			`/**`,
+			` */`,
+			`const Klass2 = class {}`
 		)
 	}, {
 		options: [{
@@ -19,7 +23,9 @@ module.exports = {
 			}
 		}],
 		code: concat(
-			`Klass = class {}`
+			`Klass1 = class {}`,
+			``,
+			`const Klass2 = class {}`
 		)
 	}],
 	invalid: [{
@@ -29,9 +35,12 @@ module.exports = {
 			}
 		}],
 		code: concat(
-			`Klass = class {}`
+			`Klass = class {}`,
+			``,
+			`const Klass2 = class {}`
 		),
 		errors: errors(
+			'Missing JSDoc comment.',
 			'Missing JSDoc comment.'
 		)
 	}]

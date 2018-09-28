@@ -1,6 +1,6 @@
-const {errors, concat, extendToClassExpression} = require(`../../helper`);
+const {errors, concat} = require(`../../helper`);
 
-module.exports = extendToClassExpression({
+module.exports = {
 	valid: [{
 		code: concat(
 			`function func(arg) {`,
@@ -126,4 +126,4 @@ module.exports = extendToClassExpression({
 			'Assignment to property of function parameter \'arg\'.'
 		)
 	}]
-});
+};

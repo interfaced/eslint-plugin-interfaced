@@ -1,6 +1,6 @@
-const {errors, concat, extendToClassExpression} = require(`../helper`);
+const {errors, concat} = require(`../helper`);
 
-module.exports = extendToClassExpression({
+module.exports = {
 	valid: [{
 		code: concat(
 			`/**`,
@@ -36,4 +36,4 @@ module.exports = extendToClassExpression({
 			'Unexpected tab character in type of @typedef.'
 		)
 	}]
-});
+};

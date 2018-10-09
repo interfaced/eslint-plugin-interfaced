@@ -14,6 +14,7 @@ module.exports.rules = {
 	'interface-name-prefix': require('./lib/rules/interface-name-prefix'),
 	'jsdoc-tags-order': require('./lib/rules/jsdoc-tags-order'),
 	'jsdoc-type-application-dot': require('./lib/rules/jsdoc-type-application-dot'),
+	'jsdoc-type-indent': require('./lib/rules/jsdoc-type-indent'),
 	'jsdoc-type-spacing': require('./lib/rules/jsdoc-type-spacing'),
 	'lines-around-class': require('./lib/rules/lines-around-class'),
 	'lines-between-methods': require('./lib/rules/lines-between-methods'),

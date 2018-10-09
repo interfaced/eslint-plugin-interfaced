@@ -41,6 +41,7 @@ npm i eslint-plugin-interfaced --save-dev
 * [interfaced/interface-name-prefix](docs/rules/interface-name-prefix.md)
 * [interfaced/jsdoc-tags-order](docs/rules/jsdoc-tags-order.md)
 * [interfaced/jsdoc-type-application-dot](docs/rules/jsdoc-type-application-dot.md)
+* [interfaced/jsdoc-type-indent](docs/rules/jsdoc-type-indent.md)
 * [interfaced/jsdoc-type-spacing](docs/rules/jsdoc-type-spacing.md)
 * [interfaced/lines-around-class](docs/rules/lines-around-class.md)
 * [interfaced/lines-between-methods](docs/rules/lines-between-methods.md)

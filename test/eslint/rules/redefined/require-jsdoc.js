@@ -35,7 +35,7 @@ module.exports = {
 			}
 		}],
 		code: concat(
-			`Klass = class {}`,
+			`Klass1 = class {}`,
 			``,
 			`const Klass2 = class {}`
 		),

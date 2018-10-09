@@ -52,7 +52,7 @@ module.exports = {
 			` * @return {void} Returns's description`,
 			` * @protected`,
 			` * @abstract`,
-			` * @param {number} arg Param's description `,
+			` * @param {number} arg Param's description`,
 			` */`
 		),
 		output: concat(

@@ -1,5 +1,11 @@
 # Change log
 
+## 1.4.0 (release date: 9.10.2018)
+
+* Preserve the head and the tail of a JSDoc
+* `jsdoc-type-spacing`: don't crash on an one-symbol token
+* New rule: `jsdoc-type-indent`
+
 ## 1.3.0 (release date: 28.09.2018)
 
 * `jsdoc-type-spacing`: tolerate multiline types

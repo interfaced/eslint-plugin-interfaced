@@ -72,6 +72,7 @@ const ruleNames = [
 	'interface-name-prefix',
 	'jsdoc-tags-order',
 	'jsdoc-type-application-dot',
+	'jsdoc-type-indent',
 	'jsdoc-type-spacing',
 	'lines-around-class',
 	'lines-between-methods',

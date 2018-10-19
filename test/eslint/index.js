@@ -12,7 +12,18 @@ function addLineNumbers(code) {
 		.reduce((result, line, index) => result + `\n${index + 1}. ${line}`, '');
 }
 
-RuleTester.it = (title, fn) => it(addAlignment(addLineNumbers(title)), fn);
+RuleTester.it = (title, fn) => it(addAlignment(addLineNumbers(title)), function(...args) {
+	try {
+		fn(...args);
+	} catch (e) {
+		// Skip the scenario when it has a parsing error, e.g. when is uses import/export not in module context
+		if (e.message.includes('Parsing error')) {
+			this.skip();
+		} else {
+			throw e;
+		}
+	}
+});
 
 const testers = [
 	{
@@ -27,7 +38,7 @@ const testers = [
 		})
 	},
 	{
-		name: 'Node.js',
+		name: 'Node',
 		tester: new RuleTester({
 			parserOptions: {
 				ecmaVersion: 2015
@@ -38,15 +49,7 @@ const testers = [
 		})
 	},
 	{
-		name: 'ES2018',
-		tester: new RuleTester({
-			parserOptions: {
-				ecmaVersion: 2018
-			}
-		})
-	},
-	{
-		name: 'Modules',
+		name: 'Module',
 		tester: new RuleTester({
 			parserOptions: {
 				ecmaVersion: 2015,
@@ -89,7 +92,8 @@ const ruleNames = [
 	'typecast-spacing'
 ];
 
-const preventUnusedRuleName = [
+const preventUnusedRuleNames = [
+	'prevent-unused-jsdoc-types',
 	'prevent-unused-typedef-vars',
 	'prevent-unused-meta-params'
 ];
@@ -104,7 +108,7 @@ describe('Rules', () => {
 				tester.run(ruleName, rule, require(path.join(__dirname, 'rules', ruleName)));
 			});
 
-			preventUnusedRuleName.forEach((ruleName) => {
+			preventUnusedRuleNames.forEach((ruleName) => {
 				tester.linter.defineRule(ruleName, rules[ruleName]);
 
 				tester.run(

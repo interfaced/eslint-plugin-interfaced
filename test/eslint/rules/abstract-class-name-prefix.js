@@ -10,6 +10,15 @@ module.exports = extendClassDeclarations({
 			`   constructor() {}`,
 			`}`
 		)
+	}, {
+		code: concat(
+			`/**`,
+			` * @abstract`,
+			` */`,
+			`export default class {`,
+			`   constructor() {}`,
+			`}`
+		)
 	}],
 	invalid: [{
 		code: concat(

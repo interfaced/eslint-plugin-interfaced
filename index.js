@@ -26,6 +26,7 @@ module.exports.rules = {
 	'no-restricted-jsdoc-tags': require('./lib/rules/no-restricted-jsdoc-tags'),
 	'no-tabs-in-jsdoc-type': require('./lib/rules/no-tabs-in-jsdoc-type'),
 	'prefer-shorthand-jsdoc-types': require('./lib/rules/prefer-shorthand-jsdoc-types'),
+	'prevent-unused-jsdoc-types': require('./lib/rules/prevent-unused-jsdoc-types'),
 	'prevent-unused-meta-params': require('./lib/rules/prevent-unused-meta-params'),
 	'prevent-unused-typedef-vars': require('./lib/rules/prevent-unused-typedef-vars'),
 	'props-order': require('./lib/rules/props-order'),

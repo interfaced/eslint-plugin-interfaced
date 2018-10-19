@@ -1,6 +1,6 @@
 # interfaced/jsdoc-type-indent
 
-Enforce consistent indentation in JSDocs.
+Enforce consistent indentation in JSDoc type.
 
 **Fixable:** this rule is automatically fixable by `--fix`.
 

@@ -53,6 +53,7 @@ npm i eslint-plugin-interfaced --save-dev
 * [interfaced/no-restricted-jsdoc-tags](docs/rules/no-restricted-jsdoc-tags.md)
 * [interfaced/no-tabs-in-jsdoc-type](docs/rules/no-tabs-in-jsdoc-type.md)
 * [interfaced/prefer-shorthand-jsdoc-types](docs/rules/prefer-shorthand-jsdoc-types.md)
+* [interfaced/prevent-unused-jsdoc-types](docs/rules/prevent-unused-jsdoc-types.md)
 * [interfaced/prevent-unused-meta-params](docs/rules/prevent-unused-meta-params.md)
 * [interfaced/prevent-unused-typedef-vars](docs/rules/prevent-unused-typedef-vars.md)
 * [interfaced/props-order](docs/rules/props-order.md)

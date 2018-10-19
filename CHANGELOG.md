@@ -1,10 +1,20 @@
 # Change log
 
+## 1.5.0 (release date: 19.10.2018)
+
+* `abstract-class-name-prefix`, `interface-name-prefix`: handle anonymous class declarations
+
+* New rules:
+    - `prevent-unused-jsdoc-types`
+
 ## 1.4.0 (release date: 9.10.2018)
 
-* Preserve the head and the tail of a JSDoc
 * `jsdoc-type-spacing`: don't crash on an one-symbol token
-* New rule: `jsdoc-type-indent`
+
+* New rules:
+    - `jsdoc-type-indent`
+
+* Preserve the head and the tail of a JSDoc during autofix
 
 ## 1.3.0 (release date: 28.09.2018)
 
@@ -30,10 +40,10 @@
 ## 1.1.0 (release date: 13.07.2018)
 
 * `lines-around-class`: use `1` as the default value for `before` and `after`
-* `prefer-shorthand-jsdoc-types`: auto fixing; removed `consistent` option
-* `jsdoc-type-spacing`: auto fixing; completely new options (see docs/rules/jsdoc-type-spacing)
-* `jsdoc-type-application-dot`: auto fixing
-* `jsdoc-tags-order`: auto fixing
+* `prefer-shorthand-jsdoc-types`: autofixing; removed `consistent` option
+* `jsdoc-type-spacing`: autofixing; completely new options (see docs/rules/jsdoc-type-spacing)
+* `jsdoc-type-application-dot`: autofixing
+* `jsdoc-tags-order`: autofixing
 
 * JSDoc tokenization
 * Rules documentation is separated and extended
@@ -47,7 +57,8 @@
 * `prefer-shorthand-jsdoc-types`: handle params without type
 * `caps-const`: skip computed properties of an enum
 
-* New rule: `event-const-value`
+* New rules:
+    - `event-const-value`
 
 ## 0.5.0 (release date: 15.01.2018)
 
@@ -63,7 +74,7 @@
 ## 0.4.0 (release date: 11.12.2017)
 
 * `no-unused-expressions`: consider property definitions from the prototype
-* `caps-const`, `capitalized-enum`, `capitalized-typedef`: removed auto fixing to avoid destructive code changes
+* `caps-const`, `capitalized-enum`, `capitalized-typedef`: removed autofixing to avoid destructive code changes
 
 * New rules:
     - `interface-name-prefix`

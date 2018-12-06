@@ -80,21 +80,20 @@ const ruleNames = [
 	'lines-around-class',
 	'lines-between-methods',
 	'lines-between-props',
-	'lines-between-statics',
 	'methods-order',
+	'no-jsdoc-type-multi-spaces',
+	'no-jsdoc-type-tabs',
 	'no-empty-method',
 	'no-public-underscore',
 	'no-restricted-jsdoc-tags',
-	'no-tabs-in-jsdoc-type',
 	'prefer-shorthand-jsdoc-types',
 	'props-order',
-	'statics-order',
+	'singular-enum',
 	'typecast-spacing'
 ];
 
 const preventUnusedRuleNames = [
 	'prevent-unused-jsdoc-types',
-	'prevent-unused-typedef-vars',
 	'prevent-unused-meta-params'
 ];
 

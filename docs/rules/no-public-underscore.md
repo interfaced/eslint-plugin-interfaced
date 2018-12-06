@@ -1,6 +1,6 @@
 # interfaced/no-public-underscore
 
-Disallow methods and properties with name that starts from `_` without `private`/`protected` access modifier.
+Disallow methods and properties with name that starts from "_" without private/protected access modifier.
 
 ## Resources
 

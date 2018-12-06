@@ -33,7 +33,7 @@ module.exports = {
 			`}`
 		),
 		errors: errors(
-			'Assignment to function parameter \'arg\'.'
+			`Assignment to function parameter 'arg'.`
 		)
 	}, {
 		code: concat(
@@ -42,7 +42,7 @@ module.exports = {
 			`}`
 		),
 		errors: errors(
-			'Assignment to function parameter \'arg\'.'
+			`Assignment to function parameter 'arg'.`
 		)
 	}, {
 		code: concat(
@@ -51,7 +51,7 @@ module.exports = {
 			`}`
 		),
 		errors: errors(
-			'Assignment to function parameter \'arg\'.'
+			`Assignment to function parameter 'arg'.`
 		)
 	}, {
 		options: [{
@@ -63,7 +63,7 @@ module.exports = {
 			`}`
 		),
 		errors: errors(
-			'Assignment to property of function parameter \'arg\'.'
+			`Assignment to property of function parameter 'arg'.`
 		)
 	}, {
 		options: [{
@@ -75,7 +75,7 @@ module.exports = {
 			`}`
 		),
 		errors: errors(
-			'Assignment to property of function parameter \'arg\'.'
+			`Assignment to property of function parameter 'arg'.`
 		)
 	}, {
 		options: [{
@@ -87,7 +87,7 @@ module.exports = {
 			`}`
 		),
 		errors: errors(
-			'Assignment to property of function parameter \'arg\'.'
+			`Assignment to property of function parameter 'arg'.`
 		)
 	}, {
 		options: [{
@@ -99,7 +99,7 @@ module.exports = {
 			`}`
 		),
 		errors: errors(
-			'Assignment to property of function parameter \'arg\'.'
+			`Assignment to property of function parameter 'arg'.`
 		)
 	}, {
 		options: [{
@@ -111,7 +111,7 @@ module.exports = {
 			`}`
 		),
 		errors: errors(
-			'Assignment to property of function parameter \'arg\'.'
+			`Assignment to property of function parameter 'arg'.`
 		)
 	}, {
 		options: [{
@@ -123,7 +123,7 @@ module.exports = {
 			`}`
 		),
 		errors: errors(
-			'Assignment to property of function parameter \'arg\'.'
+			`Assignment to property of function parameter 'arg'.`
 		)
 	}]
 };

@@ -39,7 +39,7 @@ module.exports = {
 			` */`
 		),
 		errors: errors(
-			`JSDoc tag "extends" is not allowed.`
+			`JSDoc tag "extends" isn't allowed.`
 		)
 	}, {
 		options: [{
@@ -51,7 +51,7 @@ module.exports = {
 			` */`
 		),
 		errors: errors(
-			`JSDoc tag "extends" is not allowed. This tags allowed only with tag "interface".`
+			`JSDoc tag "extends" isn't allowed. This tag allowed only with tag "interface".`
 		)
 	}, {
 		options: [{
@@ -63,7 +63,7 @@ module.exports = {
 			` */`
 		),
 		errors: errors(
-			`JSDoc tag "extends" is not allowed. This tags allowed only with type "TypeApplication".`
+			`JSDoc tag "extends" isn't allowed. This tag allowed only with type "TypeApplication".`
 		)
 	}]
 };

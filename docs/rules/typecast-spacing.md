@@ -1,6 +1,6 @@
 # interfaced/typecast-spacing
 
-Enforce spacing for typecast (JSDoc + parenthesis).
+Enforce spacing in typecast (JSDoc + parenthesis).
 
 **Fixable:** this rule is automatically fixable by `--fix`.
 

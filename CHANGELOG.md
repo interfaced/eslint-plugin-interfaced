@@ -1,5 +1,26 @@
 # Change log
 
+## 1.6.0 (release date: 6.12.2018)
+
+* `caps-const`: fixed an exception on enum-variables checking
+* `event-const-value`: fixed an exception on constant-variables checking
+
+* New rules:
+    - `singular-enum`
+    - `no-jsdoc-type-multi-spaces`
+
+* Renamed rules:
+    - `no-tabs-in-jsdoc-type` -> `no-jsdoc-type-tabs`
+
+* Removed rules:
+    - `statics-order`
+    - `lines-between-static`
+    - `prevent-unused-typedef-vars`
+
+* Added `type` field to rule metas
+* Support for global constants, enums and typedefs
+* Support for exported constants, enums and typedefs
+
 ## 1.5.0 (release date: 19.10.2018)
 
 * `abstract-class-name-prefix`, `interface-name-prefix`: handle anonymous class declarations
@@ -41,7 +62,7 @@
 
 * `lines-around-class`: use `1` as the default value for `before` and `after`
 * `prefer-shorthand-jsdoc-types`: autofixing; removed `consistent` option
-* `jsdoc-type-spacing`: autofixing; completely new options (see docs/rules/jsdoc-type-spacing)
+* `jsdoc-type-spacing`: autofixing; completely new options (see `docs/rules/jsdoc-type-spacing`)
 * `jsdoc-type-application-dot`: autofixing
 * `jsdoc-tags-order`: autofixing
 

@@ -59,7 +59,7 @@ module.exports = {
 			` */`
 		),
 		errors: errors(
-			`Type application should not have dot before "<"".`
+			`Type application shouldn't have dot before "<"".`
 		)
 	}, {
 		options: ['never'],
@@ -74,7 +74,7 @@ module.exports = {
 			` */`
 		),
 		errors: errors(
-			`Type application should not have dot before "<"".`
+			`Type application shouldn't have dot before "<"".`
 		)
 	}]
 };

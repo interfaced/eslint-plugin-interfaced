@@ -1,6 +1,6 @@
 # interfaced/event-const-value
 
-Enforce event constant value to be a lowercase latinic string with dash sign delimiter.
+Enforce event constant value to be a lowercase latin string with dash sign delimiter.
 
 ## Resources
 

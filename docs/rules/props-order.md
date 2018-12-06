@@ -13,12 +13,12 @@ Enforce the specified order for properties.
 
 #### scopesOrder
 
-An array of the scopes (`'public'`, `'protected'`, `'private'`) that indicates the order in which props should be defined in the class constructor.
+An array of the scopes (`'public'`, `'protected'`, `'private'`) that indicates the order in which properties should be defined in the class constructor.
 The default value is `['public', 'protected', 'private']`.
 
 #### constInTheEnd
 
-Whether consts (props marked by `@const`) should be in the end of the class constructor. The default value is `true`.
+Whether constants (properties annotated by `@const`) should be in the end of the class constructor. The default value is `true`.
 
 ## Resources
 

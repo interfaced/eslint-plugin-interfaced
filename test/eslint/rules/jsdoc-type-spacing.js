@@ -565,7 +565,7 @@ module.exports = {
 			` */`
 		),
 		errors: errors(
-			`Top type should not have space after "{".`
+			`Top type shouldn't have space after "{".`
 		)
 	}, {
 		options: [{
@@ -582,7 +582,7 @@ module.exports = {
 			` */`
 		),
 		errors: errors(
-			`Top type should not have space before "}".`
+			`Top type shouldn't have space before "}".`
 		)
 	}, {
 		options: [{
@@ -633,7 +633,7 @@ module.exports = {
 			` */`
 		),
 		errors: errors(
-			`Type should not have space after "(".`
+			`Type shouldn't have space after "(".`
 		)
 	}, {
 		options: [{
@@ -650,7 +650,7 @@ module.exports = {
 			` */`
 		),
 		errors: errors(
-			`Type should not have space before ")".`
+			`Type shouldn't have space before ")".`
 		)
 	}, {
 		options: [{
@@ -735,7 +735,7 @@ module.exports = {
 			` */`
 		),
 		errors: errors(
-			`Non nullable type should not have space after "!".`
+			`Non nullable type shouldn\'t have space after "!".`
 		)
 	}, {
 		options: [{
@@ -752,7 +752,7 @@ module.exports = {
 			` */`
 		),
 		errors: errors(
-			`Nullable type should not have space after "?".`
+			`Nullable type shouldn't have space after "?".`
 		)
 	}, {
 		options: [{
@@ -769,7 +769,7 @@ module.exports = {
 			` */`
 		),
 		errors: errors(
-			`Rest type should not have space after "...".`
+			`Rest type shouldn't have space after "...".`
 		)
 	}, {
 		options: [{
@@ -786,7 +786,7 @@ module.exports = {
 			` */`
 		),
 		errors: errors(
-			`Optional type should not have space before "=".`
+			`Optional type shouldn't have space before "=".`
 		)
 	}, {
 		options: [{
@@ -846,7 +846,7 @@ module.exports = {
 			` */`
 		),
 		errors: errors(
-			`Union should not have space before "|".`
+			`Union shouldn't have space before "|".`
 		)
 	}, {
 		options: [{
@@ -866,7 +866,7 @@ module.exports = {
 			` */`
 		),
 		errors: errors(
-			`Union should not have space after "|".`
+			`Union shouldn't have space after "|".`
 		)
 	}, {
 		options: [{
@@ -917,7 +917,7 @@ module.exports = {
 			` */`
 		),
 		errors: errors(
-			`Type application should not have space after "<".`
+			`Type application shouldn't have space after "<".`
 		)
 	}, {
 		options: [{
@@ -934,7 +934,7 @@ module.exports = {
 			` */`
 		),
 		errors: errors(
-			`Type application should not have space before ">".`
+			`Type application shouldn't have space before ">".`
 		)
 	}, {
 		options: [{
@@ -954,7 +954,7 @@ module.exports = {
 			` */`
 		),
 		errors: errors(
-			'Type application should have space before ",".'
+			`Type application should have space before ",".`
 		)
 	}, {
 		options: [{
@@ -974,7 +974,7 @@ module.exports = {
 			` */`
 		),
 		errors: errors(
-			'Type application should have space after ",".'
+			`Type application should have space after ",".`
 		)
 	}, {
 		options: [{
@@ -994,7 +994,7 @@ module.exports = {
 			` */`
 		),
 		errors: errors(
-			'Type application should not have space before ",".'
+			`Type application shouldn't have space before ",".`
 		)
 	}, {
 		options: [{
@@ -1014,7 +1014,7 @@ module.exports = {
 			` */`
 		),
 		errors: errors(
-			'Type application should not have space after ",".'
+			`Type application shouldn't have space after ",".`
 		)
 	}, {
 		options: [{
@@ -1031,7 +1031,7 @@ module.exports = {
 			` */`
 		),
 		errors: errors(
-			'Record should have space after "{".'
+			`Record should have space after "{".`
 		)
 	}, {
 		options: [{
@@ -1048,7 +1048,7 @@ module.exports = {
 			` */`
 		),
 		errors: errors(
-			'Record should have space before "}".'
+			`Record should have space before "}".`
 		)
 	}, {
 		options: [{
@@ -1065,7 +1065,7 @@ module.exports = {
 			` */`
 		),
 		errors: errors(
-			'Record should not have space after "{".'
+			`Record shouldn't have space after "{".`
 		)
 	}, {
 		options: [{
@@ -1082,7 +1082,7 @@ module.exports = {
 			` */`
 		),
 		errors: errors(
-			'Record should not have space before "}".'
+			`Record shouldn't have space before "}".`
 		)
 	}, {
 		options: [{
@@ -1102,7 +1102,7 @@ module.exports = {
 			` */`
 		),
 		errors: errors(
-			'Record should have space before ",".'
+			`Record should have space before ",".`
 		)
 	}, {
 		options: [{
@@ -1122,7 +1122,7 @@ module.exports = {
 			` */`
 		),
 		errors: errors(
-			'Record should have space after ",".'
+			`Record should have space after ",".`
 		)
 	}, {
 		options: [{
@@ -1142,7 +1142,7 @@ module.exports = {
 			` */`
 		),
 		errors: errors(
-			'Record should not have space before ",".'
+			`Record shouldn't have space before ",".`
 		)
 	}, {
 		options: [{
@@ -1162,7 +1162,7 @@ module.exports = {
 			` */`
 		),
 		errors: errors(
-			'Record should not have space after ",".'
+			`Record shouldn't have space after ",".`
 		)
 	}, {
 		options: [{
@@ -1182,7 +1182,7 @@ module.exports = {
 			` */`
 		),
 		errors: errors(
-			'Record should have space before ":".'
+			`Record should have space before ":".`
 		)
 	}, {
 		options: [{
@@ -1202,7 +1202,7 @@ module.exports = {
 			` */`
 		),
 		errors: errors(
-			'Record should have space after ":".'
+			`Record should have space after ":".`
 		)
 	}, {
 		options: [{
@@ -1222,7 +1222,7 @@ module.exports = {
 			` */`
 		),
 		errors: errors(
-			'Record should not have space before ":".'
+			`Record shouldn't have space before ":".`
 		)
 	}, {
 		options: [{
@@ -1242,7 +1242,7 @@ module.exports = {
 			` */`
 		),
 		errors: errors(
-			'Record should not have space after ":".'
+			`Record shouldn't have space after ":".`
 		)
 	}, {
 		options: [{
@@ -1259,7 +1259,7 @@ module.exports = {
 			` */`
 		),
 		errors: errors(
-			'Function should have space after "function".'
+			`Function should have space after "function".`
 		)
 	}, {
 		options: [{
@@ -1276,7 +1276,7 @@ module.exports = {
 			` */`
 		),
 		errors: errors(
-			'Function should not have space after "function".'
+			`Function shouldn't have space after "function".`
 		)
 	}, {
 		options: [{
@@ -1293,7 +1293,7 @@ module.exports = {
 			` */`
 		),
 		errors: errors(
-			'Function should have space after "(".'
+			`Function should have space after "(".`
 		)
 	}, {
 		options: [{
@@ -1310,7 +1310,7 @@ module.exports = {
 			` */`
 		),
 		errors: errors(
-			'Function should have space before ")".'
+			`Function should have space before ")".`
 		)
 	}, {
 		options: [{
@@ -1327,7 +1327,7 @@ module.exports = {
 			` */`
 		),
 		errors: errors(
-			'Function should not have space after "(".'
+			`Function shouldn't have space after "(".`
 		)
 	}, {
 		options: [{
@@ -1344,7 +1344,7 @@ module.exports = {
 			` */`
 		),
 		errors: errors(
-			'Function should not have space before ")".'
+			`Function shouldn't have space before ")".`
 		)
 	}, {
 		options: [{
@@ -1364,7 +1364,7 @@ module.exports = {
 			` */`
 		),
 		errors: errors(
-			'Function should have space before ",".'
+			`Function should have space before ",".`
 		)
 	}, {
 		options: [{
@@ -1384,7 +1384,7 @@ module.exports = {
 			` */`
 		),
 		errors: errors(
-			'Function should have space after ",".'
+			`Function should have space after ",".`
 		)
 	}, {
 		options: [{
@@ -1404,7 +1404,7 @@ module.exports = {
 			` */`
 		),
 		errors: errors(
-			'Function should not have space before ",".'
+			`Function shouldn't have space before ",".`
 		)
 	}, {
 		options: [{
@@ -1424,7 +1424,7 @@ module.exports = {
 			` */`
 		),
 		errors: errors(
-			'Function should not have space after ",".'
+			`Function shouldn't have space after ",".`
 		)
 	}, {
 		options: [{
@@ -1444,7 +1444,7 @@ module.exports = {
 			` */`
 		),
 		errors: errors(
-			'Function should have space before ":".'
+			`Function should have space before ":".`
 		)
 	}, {
 		options: [{
@@ -1464,7 +1464,7 @@ module.exports = {
 			` */`
 		),
 		errors: errors(
-			'Function should have space after ":".'
+			`Function should have space after ":".`
 		)
 	}, {
 		options: [{
@@ -1484,7 +1484,7 @@ module.exports = {
 			` */`
 		),
 		errors: errors(
-			'Function should not have space before ":".'
+			`Function shouldn't have space before ":".`
 		)
 	}, {
 		options: [{
@@ -1504,7 +1504,7 @@ module.exports = {
 			` */`
 		),
 		errors: errors(
-			'Function should not have space after ":".'
+			`Function shouldn't have space after ":".`
 		)
 	}, {
 		options: [{
@@ -1524,7 +1524,7 @@ module.exports = {
 			` */`
 		),
 		errors: errors(
-			'Function should have space before ":".'
+			`Function should have space before ":".`
 		)
 	}, {
 		options: [{
@@ -1544,7 +1544,7 @@ module.exports = {
 			` */`
 		),
 		errors: errors(
-			'Function should have space after ":".'
+			`Function should have space after ":".`
 		)
 	}, {
 		options: [{
@@ -1564,7 +1564,7 @@ module.exports = {
 			` */`
 		),
 		errors: errors(
-			'Function should not have space before ":".'
+			`Function shouldn't have space before ":".`
 		)
 	}, {
 		options: [{
@@ -1584,7 +1584,7 @@ module.exports = {
 			` */`
 		),
 		errors: errors(
-			'Function should not have space after ":".'
+			`Function shouldn't have space after ":".`
 		)
 	}]
 };

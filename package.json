@@ -1,7 +1,7 @@
 {
   "name": "eslint-plugin-interfaced",
-  "version": "1.5.0",
-  "description": "ESLint plugin with rules for the approaches adopted by Interfaced company",
+  "version": "1.6.0",
+  "description": "ESLint plugin with essential rules for Closure Compiler environment and JSDoc",
   "license": "MIT",
   "author": "Interfaced (http://interfaced.tv)",
   "homepage": "https://github.com/interfaced/eslint-plugin-interfaced",
@@ -32,15 +32,8 @@
     "eslint",
     "plugin",
     "interfaced",
-    "lines",
-    "whitespace",
-    "order",
-    "jsdoc",
-    "const",
-    "event",
-    "enum",
-    "typedef",
-    "typecast"
+    "closure compiler",
+    "jsdoc"
   ],
   "peerDependencies": {
     "eslint": "^5.0.0"
@@ -53,6 +46,7 @@
   },
   "dependencies": {
     "doctrine": "github:interfaced/doctrine#range-fixes",
-    "esutils": "2.0.2"
+    "esutils": "2.0.2",
+    "pluralize": "^7.0.0"
   }
 }

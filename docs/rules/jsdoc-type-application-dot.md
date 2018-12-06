@@ -1,6 +1,6 @@
 # interfaced/jsdoc-type-application-dot
 
-Enforce dot before `<` symbol in JSDoc type application.
+Enforce dot before "<" symbol in JSDoc type application.
 
 **Fixable:** this rule is automatically fixable by `--fix`.
 

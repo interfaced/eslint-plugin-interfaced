@@ -11,7 +11,12 @@ module.exports = {
 			`/**`,
 			` * @typedef {number}`,
 			` */`,
-			`ns.Typedef2;`
+			`ns.Typedef2;`,
+			``,
+			`/**`,
+			` * @typedef {number}`,
+			` */`,
+			`Typedef3;`
 		)
 	}],
 	invalid: [{
@@ -21,15 +26,20 @@ module.exports = {
 			` */`,
 			`let typedef1;`,
 			``,
+			`/**`,
+			` * @typedef {number}`,
+			` */`,
+			`ns.typedef2;`,
 			``,
 			`/**`,
 			` * @typedef {number}`,
 			` */`,
-			`ns.typedef2;`
+			`typedef3;`
 		),
 		errors: errors(
-			`Typedef "typedef1" is not capitalized.`,
-			`Typedef "typedef2" is not capitalized.`
+			`Typedef "typedef1" isn't capitalized.`,
+			`Typedef "typedef2" isn't capitalized.`,
+			`Typedef "typedef3" isn't capitalized.`
 		)
 	}]
 };

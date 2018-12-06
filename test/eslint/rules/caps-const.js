@@ -25,24 +25,19 @@ module.exports = extendClassDeclarations({
 	}, {
 		code: concat(
 			`/**`,
-			` * @enum {number}`,
+			` * @const {number}`,
 			` */`,
-			`ns.Enum = {`,
-			`   VALUE: 1,`,
-			`   'VALUE_TWO': 2,`,
-			`   'VALUE_THREE': 3,`,
-			`   VALUE4: 4`,
-			`};`
-		)
-	}, {
-		code: concat(
+			`let CONST = 1;`,
+			``,
 			`/**`,
-			` * @enum {number}`,
+			` * @const {number}`,
 			` */`,
-			`ns.Enum = {`,
-			`   [value]: 1,`,
-			`   [obj.prop]: 2`,
-			`};`
+			`let CONST_TWO = 2;`,
+			``,
+			`/**`,
+			` * @const {number}`,
+			` */`,
+			`let CONST3 = 3;`
 		)
 	}, {
 		code: concat(
@@ -61,6 +56,83 @@ module.exports = extendClassDeclarations({
 			` */`,
 			`ns.CONST3 = 3;`
 		)
+	}, {
+		code: concat(
+			`/**`,
+			` * @const {number}`,
+			` */`,
+			`CONST = 1;`,
+			``,
+			`/**`,
+			` * @const {number}`,
+			` */`,
+			`CONST_TWO = 2;`,
+			``,
+			`/**`,
+			` * @const {number}`,
+			` */`,
+			`CONST3 = 3;`
+		)
+	}, {
+		code: concat(
+			`/**`,
+			` * @enum {number}`,
+			` */`,
+			`let Enum1 = {`,
+			`   VALUE: 1,`,
+			`   'VALUE_TWO': 2,`,
+			`   'VALUE_THREE': 3,`,
+			`   VALUE4: 4`,
+			`};`,
+			``,
+			`/**`,
+			` * @enum {number}`,
+			` */`,
+			`let Enum2 = {`,
+			`   [value]: 1,`,
+			`   [obj.prop]: 2`,
+			`};`
+		)
+	}, {
+		code: concat(
+			`/**`,
+			` * @enum {number}`,
+			` */`,
+			`ns.Enum1 = {`,
+			`   VALUE: 1,`,
+			`   'VALUE_TWO': 2,`,
+			`   'VALUE_THREE': 3,`,
+			`   VALUE4: 4`,
+			`};`,
+			``,
+			`/**`,
+			` * @enum {number}`,
+			` */`,
+			`ns.Enum2 = {`,
+			`   [value]: 1,`,
+			`   [obj.prop]: 2`,
+			`};`
+		)
+	}, {
+		code: concat(
+			`/**`,
+			` * @enum {number}`,
+			` */`,
+			`Enum1 = {`,
+			`   VALUE: 1,`,
+			`   'VALUE_TWO': 2,`,
+			`   'VALUE_THREE': 3,`,
+			`   VALUE4: 4`,
+			`};`,
+			``,
+			`/**`,
+			` * @enum {number}`,
+			` */`,
+			`Enum2 = {`,
+			`   [value]: 1,`,
+			`   [obj.prop]: 2`,
+			`};`
+		)
 	}],
 	invalid: [{
 		code: concat(
@@ -74,7 +146,51 @@ module.exports = extendClassDeclarations({
 			`}`
 		),
 		errors: errors(
-			`Constant "const_one" is not in caps notation.`
+			`Constant "const_one" isn't in caps notation.`
+		)
+	}, {
+		code: concat(
+			`/**`,
+			` * @const {number}`,
+			` */`,
+			`let const = 1;`
+		),
+		errors: errors(
+			`Constant "const" isn't in caps notation.`
+		)
+	}, {
+		code: concat(
+			`/**`,
+			` * @const {number}`,
+			` */`,
+			`ns.const = 1;`
+		),
+		errors: errors(
+			`Constant "const" isn't in caps notation.`
+		)
+	}, {
+		code: concat(
+			`/**`,
+			` * @const {number}`,
+			` */`,
+			`const = 1;`
+		),
+		errors: errors(
+			`Constant "const" isn't in caps notation.`
+		)
+	}, {
+		code: concat(
+			`/**`,
+			` * @enum {number}`,
+			` */`,
+			`let Enum = {`,
+			`   VALUE_one: 1,`,
+			`   'value_TWO': 2`,
+			`};`
+		),
+		errors: errors(
+			`Enum property "VALUE_one" isn't in caps notation.`,
+			`Enum property "value_TWO" isn't in caps notation.`
 		)
 	}, {
 		code: concat(
@@ -87,18 +203,22 @@ module.exports = extendClassDeclarations({
 			`};`
 		),
 		errors: errors(
-			`Enum property "VALUE_one" is not in caps notation.`,
-			`Enum property "value_TWO" is not in caps notation.`
+			`Enum property "VALUE_one" isn't in caps notation.`,
+			`Enum property "value_TWO" isn't in caps notation.`
 		)
 	}, {
 		code: concat(
 			`/**`,
-			` * @const {number}`,
+			` * @enum {number}`,
 			` */`,
-			`ns.const = 1;`
+			`Enum = {`,
+			`   VALUE_one: 1,`,
+			`   'value_TWO': 2`,
+			`};`
 		),
 		errors: errors(
-			`Constant "const" is not in caps notation.`
+			`Enum property "VALUE_one" isn't in caps notation.`,
+			`Enum property "value_TWO" isn't in caps notation.`
 		)
 	}]
 });

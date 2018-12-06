@@ -1,6 +1,6 @@
 # interfaced/prefer-shorthand-jsdoc-types
 
-Enforce usage of a shorthand notation for some JSDoc types when possible.
+Enforce usage of a shorthand notation for some JSDoc types.
 
 **Fixable:** this rule is automatically fixable by `--fix`.
 

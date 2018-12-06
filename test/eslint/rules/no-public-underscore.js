@@ -57,7 +57,7 @@ module.exports = extendClassDeclarations({
 			`}`
 		),
 		errors: errors(
-			`Property "_prop" starts with "_" but not marked by @protected or @private.`
+			`Property "_prop" starts with "_" but not annotated by @protected or @private.`
 		)
 	}, {
 		code: concat(
@@ -66,7 +66,7 @@ module.exports = extendClassDeclarations({
 			`}`
 		),
 		errors: errors(
-			`Method "_method" starts with "_" but not marked by @protected or @private.`
+			`Method "_method" starts with "_" but not annotated by @protected or @private.`
 		)
 	}]
 });

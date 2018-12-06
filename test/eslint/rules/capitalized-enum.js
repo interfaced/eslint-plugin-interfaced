@@ -6,7 +6,7 @@ module.exports = {
 			`/**`,
 			` * @enum {number}`,
 			` */`,
-			`ns.Enum1 = {`,
+			`let Enum1 = {`,
 			`   VALUE1: 1,`,
 			`   VALUE2: 2`,
 			`};`,
@@ -14,7 +14,15 @@ module.exports = {
 			`/**`,
 			` * @enum {number}`,
 			` */`,
-			`let Enum2 = {`,
+			`ns.Enum2 = {`,
+			`   VALUE1: 1,`,
+			`   VALUE2: 2`,
+			`};`,
+			``,
+			`/**`,
+			` * @enum {number}`,
+			` */`,
+			`Enum3 = {`,
 			`   VALUE1: 1,`,
 			`   VALUE2: 2`,
 			`};`
@@ -25,7 +33,7 @@ module.exports = {
 			`/**`,
 			` * @enum {number}`,
 			` */`,
-			`ns.enum1 = {`,
+			`let enum1 = {`,
 			`   VALUE1: 1,`,
 			`   VALUE2: 2`,
 			`};`,
@@ -33,14 +41,23 @@ module.exports = {
 			`/**`,
 			` * @enum {number}`,
 			` */`,
-			`let enum2 = {`,
+			`ns.enum2 = {`,
+			`   VALUE1: 1,`,
+			`   VALUE2: 2`,
+			`};`,
+			``,
+			`/**`,
+			` * @enum {number}`,
+			` */`,
+			`enum3 = {`,
 			`   VALUE1: 1,`,
 			`   VALUE2: 2`,
 			`};`
 		),
 		errors: errors(
-			`Enum "enum1" is not capitalized.`,
-			`Enum "enum2" is not capitalized.`
+			`Enum "enum1" isn't capitalized.`,
+			`Enum "enum2" isn't capitalized.`,
+			`Enum "enum3" isn't capitalized.`
 		)
 	}]
 };

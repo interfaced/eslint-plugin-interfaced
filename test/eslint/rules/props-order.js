@@ -125,7 +125,7 @@ module.exports = extendClassDeclarations({
 			`}`
 		),
 		errors: errors(
-			`Prop "CONST" is constant and should be in the end of property declarations section.`,
+			`Prop "CONST" is constant and should be in the end of props declaration section.`,
 			`Prop "_protectedProp" (protected) should be before prop "_privateProp" (private) due to its priority.`,
 			`Prop "publicProp" (public) should be before prop "_protectedProp" (protected) due to its priority.`
 		)

@@ -40,8 +40,8 @@ module.exports = {
 			`const Klass2 = class {}`
 		),
 		errors: errors(
-			'Missing JSDoc comment.',
-			'Missing JSDoc comment.'
+			`Missing JSDoc comment.`,
+			`Missing JSDoc comment.`
 		)
 	}]
 };

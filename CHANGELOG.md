@@ -1,5 +1,9 @@
 # Change log
 
+## 1.6.1 (release date: 24.01.2019)
+
+* `valid-jsdoc`: handle the new error message type that was added in `eslint@5.12`
+
 ## 1.6.0 (release date: 6.12.2018)
 
 * `caps-const`: fixed an exception on enum-variables checking

@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-interfaced",
-  "version": "1.6.0",
+  "version": "1.6.1",
   "description": "ESLint plugin with essential rules for Closure Compiler environment and JSDoc",
   "license": "MIT",
   "author": "Interfaced (http://interfaced.tv)",
@@ -40,7 +40,7 @@
   },
   "devDependencies": {
     "chai": "4.1.2",
-    "eslint": "5.0.1",
+    "eslint": "^5.12.1",
     "eslint-config-interfaced": "0.1.0",
     "mocha": "5.2.0"
   },

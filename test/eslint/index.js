@@ -60,11 +60,8 @@ const testers = [
 ];
 
 const ruleNames = [
-	'redefined/camelcase',
 	'redefined/no-param-reassign',
 	'redefined/no-unused-expressions',
-	'redefined/require-jsdoc',
-	'redefined/valid-jsdoc',
 
 	'abstract-class-name-prefix',
 	'capitalized-enum',

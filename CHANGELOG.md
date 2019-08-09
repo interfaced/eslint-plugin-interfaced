@@ -1,5 +1,11 @@
 # Change log
 
+## 2.0.0-beta.1 (release date: 09.08.2019)
+
+* Support ESLint 6
+* Removed `valid-jsdoc` and `require-jsdoc` rules since they were deprecated in ESLint 6
+* Removed `camelcase` rule in order to switch back to its original implementation
+
 ## 1.6.1 (release date: 24.01.2019)
 
 * `valid-jsdoc`: handle the new error message type that was added in `eslint@5.12`

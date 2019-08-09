@@ -1,9 +1,6 @@
 module.exports.rules = {
-	'camelcase': require('./lib/rules/redefined/camelcase'),
 	'no-param-reassign': require('./lib/rules/redefined/no-param-reassign'),
 	'no-unused-expressions': require('./lib/rules/redefined/no-unused-expressions'),
-	'require-jsdoc': require('./lib/rules/redefined/require-jsdoc'),
-	'valid-jsdoc': require('./lib/rules/redefined/valid-jsdoc'),
 
 	'abstract-class-name-prefix': require('./lib/rules/abstract-class-name-prefix'),
 	'capitalized-enum': require('./lib/rules/capitalized-enum'),

@@ -1,10 +1,14 @@
 {
   "name": "eslint-plugin-interfaced",
-  "version": "1.6.1",
+  "version": "2.0.0-beta.1",
   "description": "ESLint plugin with essential rules for Closure Compiler environment and JSDoc",
   "license": "MIT",
   "author": "Interfaced (http://interfaced.tv)",
   "homepage": "https://github.com/interfaced/eslint-plugin-interfaced",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:interfaced/eslint-plugin-interfaced.git"
+  },
   "contributors": [
     "Kirill Dronkin <kirilldronkin@gmail.com>",
     "Goryaynov Igor <ygreknomean@gmail.com>"
@@ -36,17 +40,17 @@
     "jsdoc"
   ],
   "peerDependencies": {
-    "eslint": "^5.0.0"
+    "eslint": "^6.1.0"
   },
   "devDependencies": {
-    "chai": "4.1.2",
+    "chai": "4.2.0",
     "eslint": "^5.12.1",
-    "eslint-config-interfaced": "0.1.0",
-    "mocha": "5.2.0"
+    "eslint-config-interfaced": "2.0.0-beta.2",
+    "mocha": "6.2.0"
   },
   "dependencies": {
     "doctrine": "github:interfaced/doctrine#range-fixes",
-    "esutils": "2.0.2",
-    "pluralize": "^7.0.0"
+    "esutils": "2.0.3",
+    "pluralize": "^8.0.0"
   }
 }

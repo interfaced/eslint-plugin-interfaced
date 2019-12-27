@@ -1,5 +1,9 @@
 # Change log
 
+## 2.0.0 (release date: 27.12.2019)
+
+Functionally identical to 2.0.0-beta.1
+
 ## 2.0.0-beta.1 (release date: 09.08.2019)
 
 * Support ESLint 6
